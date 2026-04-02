@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光回線 おすすめ比較ランキング【2026年4月最新】</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+header{background:#fff;border-bottom:1px solid #E2E8F0;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-size:1.1rem;font-weight:700;color:#2563EB}
+.logo span{color:#1E293B}
+nav{display:flex;gap:24px;font-size:.85rem}
+nav a{color:#64748B}
+.pr-badge{font-size:.7rem;background:#FEF9C3;color:#92400E;border:1px solid #FDE68A;padding:2px 8px;border-radius:4px}
+.hero{background:#fff;border-bottom:1px solid #E2E8F0;padding:48px 0 40px}
+.hero-tag{display:inline-block;background:#EFF6FF;color:#2563EB;font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:#2563EB}
+.hero-sub{color:#64748B;font-size:.95rem;margin-bottom:20px}
+.hero-meta{display:flex;align-items:center;gap:16px;font-size:.82rem;color:#94A3B8;flex-wrap:wrap}
+.update-date{font-size:.8rem;color:#94A3B8;background:#F1F5F9;padding:3px 10px;border-radius:4px}
+.breadcrumb{padding:12px 0;font-size:.8rem;color:#94A3B8}
+.breadcrumb a{color:#2563EB}
+.breadcrumb span{margin:0 6px}
+section{padding:40px 0}
+section+section{border-top:1px solid #E2E8F0}
+.section-title{font-size:1.4rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';display:inline-block;width:4px;height:1.4em;background:#2563EB;border-radius:2px}
+.section-sub{color:#64748B;font-size:.9rem;margin-bottom:28px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:700px}
+thead th{background:#2563EB;color:#fff;padding:12px 14px;font-size:.82rem;font-weight:600;text-align:center;white-space:nowrap}
+thead th:first-child{text-align:left;border-radius:12px 0 0 0}
+thead th:last-child{border-radius:0 12px 0 0}
+tbody tr:nth-child(even){background:#F8FAFC}
+tbody tr:hover{background:#EFF6FF}
+tbody td{padding:12px 14px;font-size:.88rem;text-align:center;border-bottom:1px solid #F1F5F9}
+tbody td:first-child{text-align:left;font-weight:600}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;font-size:.75rem;font-weight:700;margin-right:8px}
+.rank-1{background:#FFD700;color:#7C5A00}
+.rank-2{background:#C0C0C0;color:#444}
+.rank-3{background:#CD7F32;color:#fff}
+.rank-other{background:#E2E8F0;color:#64748B}
+.stars{color:#F59E0B}
+.cta-btn{display:inline-block;background:#2563EB;color:#fff;font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:6px;white-space:nowrap}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:4px}
+.badge-hot{background:#FEE2E2;color:#991B1B}
+.badge-new{background:#DCFCE7;color:#166534}
+.speed-bar{display:inline-block;height:8px;background:#2563EB;border-radius:4px;vertical-align:middle;margin-right:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.card{background:#fff;border-radius:12px;border:1px solid #E2E8F0;padding:24px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 16px rgba(37,99,235,.1);border-color:#BFDBFE}
+.card-rank{font-size:.8rem;font-weight:700;color:#2563EB;margin-bottom:8px}
+.card-name{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+.card-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tag{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px;background:#EFF6FF;color:#2563EB}
+.tag-green{background:#DCFCE7;color:#166534}
+.tag-red{background:#FEE2E2;color:#991B1B}
+.tag-orange{background:#FFF7ED;color:#C2410C}
+.card-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.spec-item label{display:block;font-size:.72rem;color:#94A3B8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.spec-item value{display:block;font-size:.9rem;font-weight:600;color:#1E293B}
+.card-divider{border:none;border-top:1px solid #F1F5F9;margin:16px 0}
+.merit-demerit{font-size:.82rem}
+.merit-demerit p{display:flex;gap:6px;margin-bottom:4px}
+.merit-demerit .icon-plus{color:#16A34A}
+.merit-demerit .icon-minus{color:#DC2626}
+.card-cta{display:block;text-align:center;background:#2563EB;color:#fff;font-weight:700;padding:12px;border-radius:8px;margin-top:16px;font-size:.9rem}
+.card-cta:hover{background:#1D4ED8}
+.card-recommend{background:#FFF8E7;border:1px solid #FDE68A;border-radius:8px;padding:10px 14px;font-size:.82rem;margin-bottom:12px;color:#92400E}
+.card-recommend strong{display:block;font-size:.75rem;margin-bottom:2px;color:#B45309}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.guide-item{background:#fff;border-radius:12px;border:1px solid #E2E8F0;padding:20px}
+.guide-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#2563EB;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem;margin-bottom:12px}
+.guide-item h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
+.guide-item p{font-size:.82rem;color:#64748B}
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{background:#fff;border-radius:10px;border:1px solid #E2E8F0;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:16px 20px;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q:hover{background:#F8FAFC}
+.faq-q .icon{color:#2563EB;font-size:1.2rem;transition:transform .2s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 20px 16px;font-size:.87rem;color:#475569;line-height:1.7}
+.faq-item.open .faq-a{display:block}
+.cta-banner{background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 100%);border-radius:16px;padding:32px;text-align:center;color:#fff;margin:16px 0}
+.cta-banner h2{font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.cta-banner p{font-size:.9rem;opacity:.9;margin-bottom:20px}
+.cta-banner-btn{display:inline-block;background:#fff;color:#2563EB;font-weight:700;padding:12px 32px;border-radius:8px;font-size:.95rem}
+footer{background:#fff;border-top:1px solid #E2E8F0;padding:32px 0;margin-top:40px}
+.footer-note{font-size:.78rem;color:#94A3B8;line-height:1.7}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:.82rem}
+.footer-links a{color:#64748B}
+.cb-highlight{color:#2563EB;font-weight:700}
+@media(max-width:640px){nav{display:none}.hero{padding:32px 0 24px}.cards{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">hikaku<span>navi</span></div>
+      <nav>
+        <a href="#">クレジットカード</a>
+        <a href="#">光回線</a>
+        <a href="#">格安SIM</a>
+        <a href="#">NISA</a>
+      </nav>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="#">TOP</a><span>›</span>
+      <a href="#">光回線</a><span>›</span>
+      比較ランキング
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-tag">2026年4月 最新版</div>
+      <h1>光回線<br><span>おすすめ比較ランキング</span></h1>
+      <p class="hero-sub">月額料金・実測速度・キャッシュバックを徹底比較。乗り換えで最大72,000円還元。</p>
+      <div class="hero-meta">
+        <span class="update-date">最終更新: 2026年4月2日</span>
+        <strong>編集部が独自調査</strong>
+        <span>掲載6回線</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-title">比較表</div>
+      <p class="section-sub">主要光回線6社を一覧比較。<small>※ 当サイトはアフィリエイト広告を掲載しています</small></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>回線名</th>
+              <th>月額(マンション)</th>
+              <th>月額(戸建て)</th>
+              <th>実測速度</th>
+              <th>キャッシュバック</th>
+              <th>スマホ割</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>NURO光<span class="badge badge-hot">速度No.1</span></td>
+              <td>5,200円</td>
+              <td>5,200円</td>
+              <td><span class="speed-bar" style="width:58px"></span>580Mbps</td>
+              <td class="cb-highlight">45,000円</td>
+              <td>ソフトバンク</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-1">1</span>ドコモ光<span class="badge badge-new">人気</span></td>
+              <td>4,400円</td>
+              <td>5,720円</td>
+              <td><span class="speed-bar" style="width:27px"></span>270Mbps</td>
+              <td class="cb-highlight">38,000円</td>
+              <td>ドコモ</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>auひかり</td>
+              <td>4,180円</td>
+              <td>5,610円</td>
+              <td><span class="speed-bar" style="width:47px"></span>470Mbps</td>
+              <td class="cb-highlight">72,000円</td>
+              <td>au/UQ</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>ソフトバンク光</td>
+              <td>4,180円</td>
+              <td>5,720円</td>
+              <td><span class="speed-bar" style="width:31px"></span>310Mbps</td>
+              <td class="cb-highlight">37,000円</td>
+              <td>SB/Y!mobile</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>楽天ひかり</td>
+              <td>4,180円</td>
+              <td>5,280円</td>
+              <td><span class="speed-bar" style="width:22px"></span>220Mbps</td>
+              <td>なし</td>
+              <td>楽天モバイル</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">6</span>ビッグローブ光</td>
+              <td>4,378円</td>
+              <td>5,478円</td>
+              <td><span class="speed-bar" style="width:25px"></span>250Mbps</td>
+              <td class="cb-highlight">40,000円</td>
+              <td>au/UQ</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ 実測速度はみんなのネット回線速度（2026年3月調査）の下り中央値。環境により異なります</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">各回線の詳細</div>
+      <p class="section-sub">編集部おすすめ順に詳しく解説します</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-rank">🥇 第1位（同率）</div>
+          <div class="card-name">NURO光</div>
+          <div class="card-tag-row">
+            <span class="tag tag-red">速度最速</span>
+            <span class="tag">独自回線</span>
+            <span class="tag">戸建て定額</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>ゲームや動画配信を快適に楽しみたい方。ソフトバンクユーザーでセット割を活用したい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>5,200円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,200円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>580Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>45,000円</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 独自回線で業界最速クラスの実測速度</p>
+            <p><span class="icon-plus">✓</span> 戸建て・マンション同一料金</p>
+            <p><span class="icon-plus">✓</span> ソフトバンクとのセット割あり</p>
+            <p><span class="icon-minus">✗</span> 対応エリアが限られる</p>
+            <p><span class="icon-minus">✗</span> 工事が2回必要（NTT回線+NURO独自）</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">🥇 第1位（同率）</div>
+          <div class="card-name">ドコモ光</div>
+          <div class="card-tag-row">
+            <span class="tag tag-green">ドコモ割</span>
+            <span class="tag">安定性◎</span>
+            <span class="tag">広エリア</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>ドコモユーザー。全国どこでも使いたい方。安定した回線を求める方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>4,400円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,720円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>270Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>38,000円</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> ドコモとのセット割で月最大1,100円割引</p>
+            <p><span class="icon-plus">✓</span> NTT回線使用で全国対応エリアが広い</p>
+            <p><span class="icon-plus">✓</span> プロバイダが選べる（13社）</p>
+            <p><span class="icon-minus">✗</span> 速度はNUROより劣る</p>
+            <p><span class="icon-minus">✗</span> マンション料金がやや高め</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">🥉 第3位</div>
+          <div class="card-name">auひかり</div>
+          <div class="card-tag-row">
+            <span class="tag tag-red">CB最大72,000円</span>
+            <span class="tag">au/UQ割</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>auまたはUQモバイルユーザー。キャッシュバックを重視する方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>4,180円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,610円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>470Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>72,000円</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 業界最大水準のキャッシュバック</p>
+            <p><span class="icon-plus">✓</span> 実測速度が高くNURO光に次ぐ</p>
+            <p><span class="icon-plus">✓</span> auとのセット割で大幅割引</p>
+            <p><span class="icon-minus">✗</span> auユーザー以外は恩恵が薄い</p>
+            <p><span class="icon-minus">✗</span> 独自回線のためエリア限定</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第4位</div>
+          <div class="card-name">ソフトバンク光</div>
+          <div class="card-tag-row">
+            <span class="tag">SB/Y!mobile割</span>
+            <span class="tag">工事費無料</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>ソフトバンクまたはワイモバイルユーザー。スマホとセットで安くしたい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>4,180円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,720円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>310Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>37,000円</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> SB/Y!mobileとのセット割（最大1,100円/月）</p>
+            <p><span class="icon-plus">✓</span> 工事費実質無料キャンペーン</p>
+            <p><span class="icon-minus">✗</span> 戸建て料金が高め</p>
+            <p><span class="icon-minus">✗</span> 速度は平均的</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第5位</div>
+          <div class="card-name">楽天ひかり</div>
+          <div class="card-tag-row">
+            <span class="tag">楽天モバイル割</span>
+            <span class="tag tag-green">楽天市場ポイント</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>楽天モバイルユーザー。楽天ポイントを貯めたい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>4,180円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,280円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>220Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>なし</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 楽天モバイルとのセット割あり</p>
+            <p><span class="icon-plus">✓</span> 楽天ポイントが毎月付与される</p>
+            <p><span class="icon-minus">✗</span> キャッシュバックなし</p>
+            <p><span class="icon-minus">✗</span> 速度はやや遅め</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第6位</div>
+          <div class="card-name">ビッグローブ光</div>
+          <div class="card-tag-row">
+            <span class="tag">au/UQ割</span>
+            <span class="tag">老舗プロバイダ</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>auユーザーで他の選択肢も検討したい方。老舗プロバイダのサポートを重視する方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>マンション</label><value>4,378円/月</value></div>
+            <div class="spec-item"><label>戸建て</label><value>5,478円/月</value></div>
+            <div class="spec-item"><label>実測速度</label><value>250Mbps</value></div>
+            <div class="spec-item"><label>CB</label><value>40,000円</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 老舗プロバイダで安定したサポート</p>
+            <p><span class="icon-plus">✓</span> au/UQとのセット割対応</p>
+            <p><span class="icon-minus">✗</span> 月額がやや高め</p>
+            <p><span class="icon-minus">✗</span> 速度は平均的</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">光回線の選び方</div>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <div class="guide-num">1</div>
+          <h3>スマホキャリアと合わせる</h3>
+          <p>光回線とスマホを同一キャリアでまとめると「セット割」が適用され、スマホ代を毎月最大1,100円削減できます。まずは現在のスマホキャリアを確認。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">2</div>
+          <h3>対応エリアを確認する</h3>
+          <p>NURO光・auひかりは独自回線のため対応エリアが限られます。まず公式サイトで住所検索し、申し込み可能か確認しましょう。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">3</div>
+          <h3>初期費用とCBを計算する</h3>
+          <p>工事費・契約事務手数料などの初期費用とキャッシュバックを差し引いた「実質コスト」で比較しましょう。auひかりはCBが72,000円と最大水準。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">4</div>
+          <h3>速度を重視するならNURO光</h3>
+          <p>4K動画・オンラインゲームを楽しむ方はNURO光が断トツ。実測速度580Mbpsは他社の2倍以上。ただしエリア確認が必須です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">光回線に乗り換えると今の回線の解約金はかかりますか？<span class="icon">+</span></button>
+          <div class="faq-a">契約期間中に解約すると違約金（1〜3万円程度）が発生する場合があります。多くの光回線会社が「他社違約金負担」キャンペーンを実施しており、乗り換え時の違約金を負担してもらえる場合があります。申し込み前に確認を。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">工事なしで使える光回線はありますか？<span class="icon">+</span></button>
+          <div class="faq-a">既存の光コンセントがある物件では工事不要で開通できる場合があります。また、工事不要で使える「ホームルーター（置くだけWi-Fi）」も選択肢の一つです。ただし速度や安定性は有線の光回線に劣ります。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">マンションと戸建てで料金が違うのはなぜ？<span class="icon">+</span></button>
+          <div class="faq-a">マンションは建物内に光ケーブルが引き込まれており共有するため、個別に工事が不要な分コストが低くなります。戸建ては電柱から直接引き込む工事が必要なためコストが高くなります。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">開通まで何日かかりますか？<span class="icon">+</span></button>
+          <div class="faq-a">申し込みから工事完了まで平均2〜4週間かかります。工事日は立ち会いが必要です。引越しが決まっている方は早めに申し込むことをおすすめします。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">キャッシュバックはいつ受け取れますか？<span class="icon">+</span></button>
+          <div class="faq-a">キャッシュバックの受け取り時期は会社によって異なりますが、開通後6ヶ月〜12ヶ月後が多いです。申請が必要な場合もあるため、申し込み時の条件を必ず確認しましょう。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>📡 光回線の乗り換えで月々の通信費を削減しよう</h2>
+        <p>キャッシュバック最大72,000円。スマホとのセット割で更にお得に。</p>
+        <a href="#" class="cta-banner-btn">auひかり公式サイトへ（CB最大72,000円）</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">広告掲載について</a>
+      <a href="#">運営者情報</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+    <p class="footer-note">当サイトはアフィリエイト広告を掲載しています。掲載情報は2026年4月2日時点のものです。料金・キャッシュバック額は予告なく変更される場合があります。最新情報は各公式サイトでご確認ください。</p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
+</script>
+</body>
+</html>

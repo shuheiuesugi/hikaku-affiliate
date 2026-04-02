@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>比較アフィリエイトLP モックデザイン一覧 | hikaku-affiliate</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0F172A;color:#E2E8F0;line-height:1.6;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.site-header{background:#1E293B;border-bottom:1px solid #334155;padding:20px 0}
+.site-header h1{font-size:1.4rem;font-weight:800;color:#F59E0B;margin-bottom:4px}
+.site-header p{font-size:.85rem;color:#64748B}
+
+/* Hero */
+.hero{padding:48px 0;text-align:center;border-bottom:1px solid #334155}
+.hero h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;background:linear-gradient(135deg,#F59E0B,#FBBF24);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero p{color:#94A3B8;font-size:.95rem;max-width:600px;margin:0 auto 24px}
+.meta-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
+.meta-badge{display:inline-block;background:#1E293B;border:1px solid #334155;color:#94A3B8;font-size:.78rem;padding:6px 14px;border-radius:20px}
+.meta-badge strong{color:#F59E0B}
+
+/* Pattern Overview */
+.patterns-overview{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;padding:40px 0}
+.pattern-card{border-radius:16px;overflow:hidden;border:2px solid #334155;transition:all .2s;cursor:default}
+.pattern-card:hover{transform:translateY(-4px);border-color:#F59E0B44}
+
+.pattern-a .pattern-header{background:#EFF6FF;padding:20px 24px;border-bottom:2px solid #E2E8F0}
+.pattern-a .pattern-name{color:#2563EB;font-size:1rem;font-weight:800;margin-bottom:4px}
+.pattern-a .pattern-desc{color:#64748B;font-size:.82rem}
+.pattern-a .pattern-body{background:#F8FAFC;padding:16px 24px}
+.pattern-a .pattern-preview{height:80px;background:#fff;border-radius:8px;border:1px solid #E2E8F0;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px}
+.pattern-a .preview-dot{width:8px;height:8px;border-radius:50%;background:#2563EB}
+.pattern-a .preview-bar{height:8px;background:#EFF6FF;border-radius:4px;flex:1}
+.pattern-a .preview-bar-blue{background:#2563EB;width:60%}
+
+.pattern-b .pattern-header{background:#1E293B;padding:20px 24px;border-bottom:2px solid #334155}
+.pattern-b .pattern-name{color:#F59E0B;font-size:1rem;font-weight:800;margin-bottom:4px}
+.pattern-b .pattern-desc{color:#64748B;font-size:.82rem}
+.pattern-b .pattern-body{background:#0F172A;padding:16px 24px}
+.pattern-b .pattern-preview{height:80px;background:#1E293B;border-radius:8px;border:1px solid #334155;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 16px}
+.pattern-b .preview-dot{width:8px;height:8px;border-radius:50%;background:#F59E0B}
+.pattern-b .preview-bar{height:8px;background:#334155;border-radius:4px;flex:1}
+.pattern-b .preview-bar-gold{background:linear-gradient(90deg,#F59E0B,#D97706);width:55%}
+
+.pattern-c .pattern-header{background:linear-gradient(135deg,#7C3AED,#2563EB);padding:20px 24px}
+.pattern-c .pattern-name{color:#fff;font-size:1rem;font-weight:800;margin-bottom:4px}
+.pattern-c .pattern-desc{color:rgba(255,255,255,.7);font-size:.82rem}
+.pattern-c .pattern-body{background:#F8FAFF;padding:16px 24px}
+.pattern-c .pattern-preview{height:80px;background:#fff;border-radius:8px;border:2px solid #C4B5FD;margin-bottom:12px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 16px}
+.pattern-c .preview-dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#7C3AED,#2563EB)}
+.pattern-c .preview-bar{height:10px;background:#F3E8FF;border-radius:20px;flex:1}
+.pattern-c .preview-bar-color{background:linear-gradient(90deg,#7C3AED,#2563EB);width:65%;border-radius:20px}
+
+/* Links Grid */
+.links-section{padding:40px 0}
+.links-section h2{font-size:1.2rem;font-weight:700;margin-bottom:8px;color:#F1F5F9}
+.links-section .subtitle{color:#64748B;font-size:.85rem;margin-bottom:28px}
+
+.pattern-group{margin-bottom:40px}
+.pattern-label{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.pattern-label-badge{display:inline-block;font-size:.78rem;font-weight:700;padding:4px 16px;border-radius:20px}
+.badge-a{background:#EFF6FF;color:#2563EB;border:1px solid #BFDBFE}
+.badge-b{background:#1E293B;color:#F59E0B;border:1px solid #334155}
+.badge-c{background:linear-gradient(135deg,#7C3AED,#2563EB);color:#fff}
+.pattern-label-name{font-size:1rem;font-weight:700;color:#F1F5F9}
+.pattern-label-desc{font-size:.82rem;color:#64748B}
+
+.link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+
+/* Link Card variants */
+.link-card{border-radius:12px;overflow:hidden;border:1px solid;transition:all .2s;display:block}
+.link-card:hover{transform:translateY(-2px)}
+
+.link-card-a{background:#fff;border-color:#E2E8F0}
+.link-card-a:hover{border-color:#2563EB;box-shadow:0 4px 16px rgba(37,99,235,.15)}
+.link-card-a .lc-header{background:#2563EB;padding:12px 16px;color:#fff}
+.link-card-a .lc-body{padding:14px 16px;background:#fff}
+.link-card-a .lc-icon{font-size:1.4rem;margin-bottom:4px}
+.link-card-a .lc-title{font-size:.88rem;font-weight:700;color:#1E293B;margin-bottom:4px}
+.link-card-a .lc-meta{font-size:.76rem;color:#94A3B8}
+.link-card-a .lc-arrow{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.link-card-a .lc-cta{font-size:.75rem;font-weight:700;color:#2563EB}
+
+.link-card-b{background:#1E293B;border-color:#334155}
+.link-card-b:hover{border-color:#F59E0B;box-shadow:0 4px 16px rgba(245,158,11,.15)}
+.link-card-b .lc-header{background:linear-gradient(135deg,#F59E0B,#D97706);padding:12px 16px;color:#0F172A}
+.link-card-b .lc-body{padding:14px 16px;background:#1E293B}
+.link-card-b .lc-icon{font-size:1.4rem;margin-bottom:4px}
+.link-card-b .lc-title{font-size:.88rem;font-weight:700;color:#F1F5F9;margin-bottom:4px}
+.link-card-b .lc-meta{font-size:.76rem;color:#64748B}
+.link-card-b .lc-arrow{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.link-card-b .lc-cta{font-size:.75rem;font-weight:700;color:#F59E0B}
+
+.link-card-c{background:#fff;border-color:#E9D5FF}
+.link-card-c:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(124,58,237,.15)}
+.link-card-c .lc-header{padding:12px 16px;color:#fff}
+.link-card-c .lc-header-cc{background:linear-gradient(135deg,#7C3AED,#9333EA)}
+.link-card-c .lc-header-hikari{background:linear-gradient(135deg,#059669,#10B981)}
+.link-card-c .lc-header-sim{background:linear-gradient(135deg,#EA580C,#F97316)}
+.link-card-c .lc-header-nisa{background:linear-gradient(135deg,#2563EB,#3B82F6)}
+.link-card-c .lc-body{padding:14px 16px}
+.link-card-c .lc-icon{font-size:1.4rem;margin-bottom:4px}
+.link-card-c .lc-title{font-size:.88rem;font-weight:700;color:#1E293B;margin-bottom:4px}
+.link-card-c .lc-meta{font-size:.76rem;color:#94A3B8}
+.link-card-c .lc-arrow{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+.link-card-c .lc-cta{font-size:.75rem;font-weight:700;color:#7C3AED}
+
+/* Feature list */
+.features{background:#1E293B;border-radius:16px;border:1px solid #334155;padding:28px;margin:32px 0}
+.features h3{font-size:1rem;font-weight:700;color:#F59E0B;margin-bottom:16px}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.feature-item{display:flex;gap:10px;align-items:flex-start}
+.feature-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.feature-text h4{font-size:.85rem;font-weight:700;color:#F1F5F9;margin-bottom:2px}
+.feature-text p{font-size:.78rem;color:#64748B}
+
+/* Divider */
+.section-divider{border:none;border-top:1px solid #334155;margin:40px 0}
+
+/* Footer */
+footer{background:#1E293B;border-top:1px solid #334155;padding:24px 0;margin-top:48px}
+.footer-text{font-size:.78rem;color:#475569;text-align:center}
+
+/* Responsive */
+@media(max-width:640px){
+  .patterns-overview{grid-template-columns:1fr}
+  .link-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:400px){
+  .link-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>hikaku-affiliate</h1>
+    <p>比較アフィリエイトLP モックデザインサンプル | 全3パターン × 4カテゴリ = 12ページ</p>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="container">
+      <h2>デザインパターン比較一覧</h2>
+      <p>価格.com型アフィリエイトLPの3デザインパターンサンプルです。クレジットカード・光回線・格安SIM・NISA証券口座の4カテゴリを収録。</p>
+      <div class="meta-row">
+        <span class="meta-badge">作成日: <strong>2026年4月2日</strong></span>
+        <span class="meta-badge">パターン: <strong>3種類</strong></span>
+        <span class="meta-badge">ページ数: <strong>12ページ</strong></span>
+        <span class="meta-badge">外部依存: <strong>なし（自己完結）</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- Pattern Overview -->
+    <div class="patterns-overview">
+      <div class="pattern-card pattern-a">
+        <div class="pattern-header">
+          <div class="pattern-name">Pattern A — クリーン・ミニマル</div>
+          <div class="pattern-desc">白背景・余白重視・洗練されたブルーアクセント</div>
+        </div>
+        <div class="pattern-body">
+          <div class="pattern-preview">
+            <div class="preview-dot"></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+              <div class="preview-bar preview-bar-blue" style="height:8px;border-radius:4px"></div>
+              <div class="preview-bar" style="height:8px;border-radius:4px;width:80%"></div>
+              <div class="preview-bar" style="height:8px;border-radius:4px;width:60%"></div>
+            </div>
+          </div>
+          <ul style="font-size:.78rem;color:#64748B;list-style:none;display:flex;flex-direction:column;gap:4px">
+            <li>✓ 白背景ベース、余白たっぷり</li>
+            <li>✓ 薄いグレーのストライプ比較表</li>
+            <li>✓ アクセントカラー: #2563EB（ブルー）</li>
+            <li>✓ カード型レイアウト</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pattern-card pattern-b">
+        <div class="pattern-header">
+          <div class="pattern-name">Pattern B — ダーク・プレミアム</div>
+          <div class="pattern-desc">ダーク背景・ゴールドアクセント・信頼感のあるルック</div>
+        </div>
+        <div class="pattern-body">
+          <div class="pattern-preview">
+            <div class="preview-dot"></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+              <div class="preview-bar preview-bar-gold" style="height:8px;border-radius:4px"></div>
+              <div class="preview-bar" style="height:8px;border-radius:4px;width:70%"></div>
+              <div class="preview-bar" style="height:8px;border-radius:4px;width:50%"></div>
+            </div>
+          </div>
+          <ul style="font-size:.78rem;color:#64748B;list-style:none;display:flex;flex-direction:column;gap:4px">
+            <li style="color:#94A3B8">✓ ダーク背景 #0F172A</li>
+            <li style="color:#94A3B8">✓ アクセント: ゴールド/アンバー #F59E0B</li>
+            <li style="color:#94A3B8">✓ 控えめなグラデーション</li>
+            <li style="color:#94A3B8">✓ 金融・投資系の信頼感</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pattern-card pattern-c">
+        <div class="pattern-header">
+          <div class="pattern-name">Pattern C — カラフル・ポップ</div>
+          <div class="pattern-desc">カテゴリ別アクセント・バッジ多用・若年層向け</div>
+        </div>
+        <div class="pattern-body">
+          <div class="pattern-preview">
+            <div class="preview-dot"></div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:6px">
+              <div class="preview-bar preview-bar-color" style="height:10px;border-radius:20px"></div>
+              <div class="preview-bar" style="height:10px;border-radius:20px;width:80%"></div>
+              <div class="preview-bar" style="height:10px;border-radius:20px;width:55%"></div>
+            </div>
+            <span style="font-size:1.2rem">🎉</span>
+          </div>
+          <ul style="font-size:.78rem;color:#64748B;list-style:none;display:flex;flex-direction:column;gap:4px">
+            <li>✓ カテゴリ別カラー（クレカ:紫、光:緑、SIM:橙、NISA:青）</li>
+            <li>✓ バッジ・タグを多用</li>
+            <li>✓ 丸みを帯びたUIデザイン</li>
+            <li>✓ 親しみやすいポップなトーン</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features">
+      <h3>共通仕様</h3>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <span class="feature-icon">📱</span>
+          <div class="feature-text">
+            <h4>レスポンシブ対応</h4>
+            <p>モバイルファースト設計。比較表はモバイル時にスクロール可能。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">⚡</span>
+          <div class="feature-text">
+            <h4>軽量・自己完結</h4>
+            <p>外部CSS/JS依存なし。CDNも不使用。インラインスタイルで完結。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📊</span>
+          <div class="feature-text">
+            <h4>比較表 + カード詳細</h4>
+            <p>各ページに比較表・詳細カード・選び方ガイド・FAQを収録。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🎯</span>
+          <div class="feature-text">
+            <h4>CTAボタン</h4>
+            <p>比較表内・カード内・バナーの3箇所にCTAを配置。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <div class="feature-text">
+            <h4>FAQ アコーディオン</h4>
+            <p>5問のFAQをアコーディオン形式で収録。JavaScriptは最小限。</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">📋</span>
+          <div class="feature-text">
+            <h4>広告表記・コンプライアンス</h4>
+            <p>「PR/広告」表記・投資リスク開示（NISAページ）を適切に配置。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- Links -->
+    <div class="links-section">
+      <h2>全ページ一覧</h2>
+      <p class="subtitle">各ページへのリンク。クリックして実際のデザインを確認できます。</p>
+
+      <!-- Pattern A -->
+      <div class="pattern-group">
+        <div class="pattern-label">
+          <span class="pattern-label-badge badge-a">Pattern A</span>
+          <div>
+            <div class="pattern-label-name">クリーン・ミニマル</div>
+            <div class="pattern-label-desc">白背景・ブルーアクセント・洗練されたデザイン</div>
+          </div>
+        </div>
+        <div class="link-grid">
+          <a href="pattern-a/credit-card.html" class="link-card link-card-a">
+            <div class="lc-header" style="background:#2563EB;padding:10px 16px;font-size:.75rem;font-weight:700;color:#fff">Pattern A</div>
+            <div class="lc-body">
+              <div class="lc-icon">💳</div>
+              <div class="lc-title">クレジットカード比較</div>
+              <div class="lc-meta">8枚 · 還元率 · 年会費 · 旅行保険</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-a/hikari.html" class="link-card link-card-a">
+            <div class="lc-header" style="background:#2563EB;padding:10px 16px;font-size:.75rem;font-weight:700;color:#fff">Pattern A</div>
+            <div class="lc-body">
+              <div class="lc-icon">📡</div>
+              <div class="lc-title">光回線比較</div>
+              <div class="lc-meta">6回線 · 速度 · CB · スマホ割</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-a/sim.html" class="link-card link-card-a">
+            <div class="lc-header" style="background:#2563EB;padding:10px 16px;font-size:.75rem;font-weight:700;color:#fff">Pattern A</div>
+            <div class="lc-body">
+              <div class="lc-icon">📱</div>
+              <div class="lc-title">格安SIM比較</div>
+              <div class="lc-meta">8社 · 月額 · 速度 · 通話</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-a/nisa.html" class="link-card link-card-a">
+            <div class="lc-header" style="background:#2563EB;padding:10px 16px;font-size:.75rem;font-weight:700;color:#fff">Pattern A</div>
+            <div class="lc-body">
+              <div class="lc-icon">📈</div>
+              <div class="lc-title">NISA証券口座比較</div>
+              <div class="lc-meta">6社 · 手数料 · 投信本数 · アプリ</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pattern B -->
+      <div class="pattern-group">
+        <div class="pattern-label">
+          <span class="pattern-label-badge badge-b">Pattern B</span>
+          <div>
+            <div class="pattern-label-name">ダーク・プレミアム</div>
+            <div class="pattern-label-desc">ダーク背景・ゴールドアクセント・信頼感重視</div>
+          </div>
+        </div>
+        <div class="link-grid">
+          <a href="pattern-b/credit-card.html" class="link-card link-card-b">
+            <div class="lc-header" style="background:linear-gradient(135deg,#F59E0B,#D97706);padding:10px 16px;font-size:.75rem;font-weight:700;color:#0F172A">Pattern B</div>
+            <div class="lc-body">
+              <div class="lc-icon">💳</div>
+              <div class="lc-title">クレジットカード比較</div>
+              <div class="lc-meta">8枚 · 還元率 · 年会費 · 旅行保険</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-b/hikari.html" class="link-card link-card-b">
+            <div class="lc-header" style="background:linear-gradient(135deg,#F59E0B,#D97706);padding:10px 16px;font-size:.75rem;font-weight:700;color:#0F172A">Pattern B</div>
+            <div class="lc-body">
+              <div class="lc-icon">📡</div>
+              <div class="lc-title">光回線比較</div>
+              <div class="lc-meta">6回線 · 速度 · CB · スマホ割</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-b/sim.html" class="link-card link-card-b">
+            <div class="lc-header" style="background:linear-gradient(135deg,#F59E0B,#D97706);padding:10px 16px;font-size:.75rem;font-weight:700;color:#0F172A">Pattern B</div>
+            <div class="lc-body">
+              <div class="lc-icon">📱</div>
+              <div class="lc-title">格安SIM比較</div>
+              <div class="lc-meta">8社 · 月額 · 速度 · 通話</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-b/nisa.html" class="link-card link-card-b">
+            <div class="lc-header" style="background:linear-gradient(135deg,#F59E0B,#D97706);padding:10px 16px;font-size:.75rem;font-weight:700;color:#0F172A">Pattern B</div>
+            <div class="lc-body">
+              <div class="lc-icon">📈</div>
+              <div class="lc-title">NISA証券口座比較</div>
+              <div class="lc-meta">6社 · 手数料 · 投信本数 · アプリ</div>
+              <div class="lc-arrow">
+                <span class="lc-cta">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Pattern C -->
+      <div class="pattern-group">
+        <div class="pattern-label">
+          <span class="pattern-label-badge badge-c">Pattern C</span>
+          <div>
+            <div class="pattern-label-name">カラフル・ポップ</div>
+            <div class="pattern-label-desc">カテゴリ別カラー・バッジ多用・若年層向け</div>
+          </div>
+        </div>
+        <div class="link-grid">
+          <a href="pattern-c/credit-card.html" class="link-card link-card-c">
+            <div class="lc-header lc-header-cc" style="padding:10px 16px;font-size:.75rem;font-weight:700">Pattern C 💳</div>
+            <div class="lc-body">
+              <div class="lc-icon">💜</div>
+              <div class="lc-title">クレジットカード比較</div>
+              <div class="lc-meta">8枚 · パープル系アクセント</div>
+              <div class="lc-arrow">
+                <span class="lc-cta" style="color:#7C3AED">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-c/hikari.html" class="link-card link-card-c">
+            <div class="lc-header lc-header-hikari" style="padding:10px 16px;font-size:.75rem;font-weight:700">Pattern C 📡</div>
+            <div class="lc-body">
+              <div class="lc-icon">💚</div>
+              <div class="lc-title">光回線比較</div>
+              <div class="lc-meta">6回線 · グリーン系アクセント</div>
+              <div class="lc-arrow">
+                <span class="lc-cta" style="color:#059669">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-c/sim.html" class="link-card link-card-c">
+            <div class="lc-header lc-header-sim" style="padding:10px 16px;font-size:.75rem;font-weight:700">Pattern C 📱</div>
+            <div class="lc-body">
+              <div class="lc-icon">🧡</div>
+              <div class="lc-title">格安SIM比較</div>
+              <div class="lc-meta">8社 · オレンジ系アクセント</div>
+              <div class="lc-arrow">
+                <span class="lc-cta" style="color:#EA580C">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+          <a href="pattern-c/nisa.html" class="link-card link-card-c">
+            <div class="lc-header lc-header-nisa" style="padding:10px 16px;font-size:.75rem;font-weight:700">Pattern C 📈</div>
+            <div class="lc-body">
+              <div class="lc-icon">💙</div>
+              <div class="lc-title">NISA証券口座比較</div>
+              <div class="lc-meta">6社 · ブルー系アクセント</div>
+              <div class="lc-arrow">
+                <span class="lc-cta" style="color:#2563EB">ページを見る →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="footer-text">hikaku-affiliate モックデザイン | 作成日: 2026年4月2日 | 全ページはアフィリエイト広告の研究・参考用モックアップです</p>
+  </div>
+</footer>
+
+</body>
+</html>

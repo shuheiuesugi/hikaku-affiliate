@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>格安SIM おすすめ比較ランキング【2026年4月最新】</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#FFF7ED;color:#1E293B;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+:root{--accent:#EA580C;--accent2:#C2410C;--light:#FED7AA;--mid:#FDBA74;--dark:#7C2D12}
+header{background:#fff;border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(234,88,12,.1)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-size:1.1rem;font-weight:800;color:var(--accent)}.logo span{color:#1E293B}
+nav{display:flex;gap:24px;font-size:.85rem}nav a{color:#64748B;font-weight:600}nav a:hover{color:var(--accent)}
+.pr-badge{font-size:.7rem;background:#FEF9C3;color:#92400E;border:1px solid #FDE68A;padding:2px 8px;border-radius:4px}
+.hero{background:linear-gradient(135deg,#EA580C 0%,#F97316 50%,#FB923C 100%);padding:56px 0 48px;color:#fff;position:relative;overflow:hidden}
+.hero::after{content:'📱';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:8rem;opacity:.15}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.2);color:#fff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:16px;backdrop-filter:blur(4px)}
+.hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.2;margin-bottom:12px}
+.hero h1 span{background:linear-gradient(90deg,#FDE68A,#FCD34D);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{color:rgba(255,255,255,.9);font-size:.95rem;margin-bottom:20px}
+.hero-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.update-date{background:rgba(255,255,255,.15);color:#fff;font-size:.8rem;padding:4px 12px;border-radius:20px}
+.hero-badge{display:inline-block;background:#FDE68A;color:#92400E;font-size:.78rem;font-weight:700;padding:4px 12px;border-radius:20px}
+.breadcrumb{padding:12px 0;font-size:.8rem;color:#94A3B8}.breadcrumb a{color:var(--accent)}.breadcrumb span{margin:0 6px}
+section{padding:48px 0}section+section{border-top:1px solid #FDBA74}
+.section-title{font-size:1.4rem;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:10px;color:#1E293B}
+.section-title .emoji{font-size:1.6rem}
+.section-sub{color:#64748B;font-size:.9rem;margin-bottom:28px}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:16px;box-shadow:0 4px 20px rgba(234,88,12,.12);border:2px solid #FDBA74}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:680px}
+thead th{background:var(--accent);color:#fff;padding:14px 14px;font-size:.8rem;font-weight:700;text-align:center;white-space:nowrap}
+thead th:first-child{text-align:left;border-radius:14px 0 0 0}thead th:last-child{border-radius:0 14px 0 0}
+tbody tr:nth-child(even){background:#FFF7ED}
+tbody tr:hover{background:#FED7AA}
+tbody td{padding:13px 14px;font-size:.88rem;text-align:center;border-bottom:1px solid #FED7AA}
+tbody td:first-child{text-align:left;font-weight:700}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:.75rem;font-weight:800;margin-right:8px}
+.rank-1{background:linear-gradient(135deg,#EA580C,#F97316);color:#fff}
+.rank-3{background:#CD7F32;color:#fff}
+.rank-other{background:#FED7AA;color:var(--dark)}
+.stars{color:#F59E0B}
+.cta-btn{display:inline-block;background:var(--accent);color:#fff;font-size:.78rem;font-weight:700;padding:7px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 8px rgba(234,88,12,.3)}
+.pop-badge{display:inline-flex;align-items:center;gap:3px;font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-left:4px}
+.pop-hot{background:#FEE2E2;color:#991B1B}
+.pop-new{background:#DCFCE7;color:#166534}
+.pop-cheap{background:#FDE68A;color:#92400E}
+.na{color:#94A3B8}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px}
+.card{background:#fff;border-radius:20px;border:2px solid #FDBA74;padding:24px;transition:all .2s;position:relative}
+.card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(234,88,12,.15);border-color:var(--accent)}
+.card-badge-row{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.pop-badge-lg{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px}
+.badge-popular{background:linear-gradient(135deg,#EA580C,#F97316);color:#fff}
+.badge-cheap{background:#FDE68A;color:#92400E}
+.badge-free{background:#DCFCE7;color:#166534}
+.card-name{font-size:1.15rem;font-weight:800;margin-bottom:4px;color:#1E293B}
+.card-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tag{font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:20px}
+.tag-orange{background:#FED7AA;color:var(--dark)}
+.tag-red{background:#FEE2E2;color:#991B1B}
+.tag-green{background:#DCFCE7;color:#166534}
+.tag-blue{background:#EFF6FF;color:#1D4ED8}
+.card-highlight{background:linear-gradient(135deg,#FED7AA,#FFF7ED);border-radius:12px;padding:12px;margin-bottom:16px;font-size:.82rem;color:#7C2D12}
+.card-highlight strong{display:block;font-size:.72rem;color:var(--accent);margin-bottom:2px;font-weight:700}
+.card-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.spec-item{background:#FFF7ED;border-radius:10px;padding:10px;border:1px solid #FDBA74}
+.spec-item label{display:block;font-size:.68rem;color:#94A3B8;font-weight:700;margin-bottom:2px}
+.spec-item value{display:block;font-size:.9rem;font-weight:700;color:#1E293B}
+.card-divider{border:none;border-top:2px dashed #FDBA74;margin:16px 0}
+.merit-demerit{font-size:.82rem}.merit-demerit p{display:flex;gap:6px;margin-bottom:5px;color:#475569}
+.merit-demerit .icon-plus{color:#16A34A;font-weight:700}.merit-demerit .icon-minus{color:#DC2626;font-weight:700}
+.card-cta{display:block;text-align:center;background:linear-gradient(135deg,#EA580C,#F97316);color:#fff;font-weight:700;padding:13px;border-radius:12px;margin-top:16px;font-size:.9rem;box-shadow:0 4px 12px rgba(234,88,12,.3)}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.guide-item{background:#fff;border-radius:16px;border:2px solid #FDBA74;padding:20px}
+.guide-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:linear-gradient(135deg,#EA580C,#F97316);color:#fff;border-radius:12px;font-weight:800;font-size:.9rem;margin-bottom:12px}
+.guide-item h3{font-size:.95rem;font-weight:700;margin-bottom:6px;color:#1E293B}
+.guide-item p{font-size:.82rem;color:#64748B}
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:#fff;border-radius:16px;border:2px solid #FDBA74;overflow:hidden;transition:border-color .2s}
+.faq-item.open{border-color:var(--accent)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:18px 20px;font-size:.9rem;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#1E293B}
+.faq-q:hover{background:#FFF7ED}
+.faq-q .icon{width:28px;height:28px;background:var(--light);color:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:transform .2s;flex-shrink:0;font-weight:700}
+.faq-q[aria-expanded="true"] .icon{transform:rotate(45deg);background:var(--accent);color:#fff}
+.faq-a{display:none;padding:0 20px 18px;font-size:.87rem;color:#475569;line-height:1.7}
+.faq-item.open .faq-a{display:block}
+.cta-banner{background:linear-gradient(135deg,#EA580C 0%,#F97316 50%,#FB923C 100%);border-radius:24px;padding:40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+.cta-banner::before{content:'📱';position:absolute;left:5%;top:50%;transform:translateY(-50%);font-size:4rem;opacity:.3}
+.cta-banner::after{content:'💴';position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:4rem;opacity:.3}
+.cta-banner h2{font-size:1.5rem;font-weight:800;margin-bottom:8px;position:relative}
+.cta-banner p{font-size:.9rem;opacity:.9;margin-bottom:24px;position:relative}
+.cta-banner-btn{display:inline-block;background:#fff;color:var(--accent);font-weight:800;padding:14px 36px;border-radius:24px;font-size:.95rem;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.2)}
+footer{background:#fff;border-top:2px solid #FDBA74;padding:32px 0;margin-top:48px}
+.footer-note{font-size:.78rem;color:#94A3B8;line-height:1.7}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:.82rem}.footer-links a{color:#94A3B8}
+@media(max-width:640px){nav{display:none}.hero{padding:36px 0 28px}.hero::after{display:none}.cards{grid-template-columns:1fr}.guide-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">hikaku<span>navi</span> 📱</div>
+      <nav><a href="#">クレカ</a><a href="#">光回線</a><a href="#">格安SIM</a><a href="#">NISA</a></nav>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="breadcrumb"><a href="#">TOP</a><span>›</span><a href="#">格安SIM</a><span>›</span>比較ランキング</div>
+  </div>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-tag">🏆 2026年4月 編集部が厳選</div>
+      <h1>格安SIM<br><span>おすすめ比較ランキング</span></h1>
+      <p class="hero-sub">月額・速度・データ量を徹底比較！大手から乗り換えで年間最大6万円お得に！</p>
+      <div class="hero-meta">
+        <span class="update-date">📅 最終更新: 2026年4月2日</span>
+        <span class="hero-badge">💰 最安990円から</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><span class="emoji">📊</span>比較表</div>
+      <p class="section-sub">主要格安SIM・サブブランド8社を比較。<small>※ 当サイトはアフィリエイト広告を掲載しています</small></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>キャリア</th><th>月額(3GB)</th><th>月額(20GB)</th><th>通信速度</th><th>通話</th><th>回線</th><th>おすすめ度</th><th>公式へ</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>ahamo<span class="pop-badge pop-hot">🔥人気</span></td>
+              <td class="na">—</td><td>2,970円</td><td>130Mbps</td><td>5分無料</td><td>ドコモ</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-1">1</span>LINEMO<span class="pop-badge pop-cheap">💰コスパ◎</span></td>
+              <td>990円</td><td>2,728円</td><td>70Mbps</td><td>有料</td><td>ソフトバンク</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>UQモバイル<span class="pop-badge pop-new">🏪店舗◎</span></td>
+              <td>1,628円</td><td>3,278円</td><td>80Mbps</td><td>有料</td><td>au</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>ワイモバイル</td>
+              <td>2,178円</td><td>4,158円</td><td>65Mbps</td><td>有料</td><td>ソフトバンク</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>楽天モバイル<span class="pop-badge pop-new">📞通話無制限</span></td>
+              <td>1,078円</td><td>2,178円</td><td>55Mbps</td><td>無料(アプリ)</td><td>楽天</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">6</span>IIJmio</td>
+              <td>990円</td><td>2,000円</td><td>45Mbps</td><td>有料</td><td>ドコモ/au</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">7</span>mineo</td>
+              <td>1,298円</td><td>2,178円</td><td>40Mbps</td><td>有料</td><td>3キャリア</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">8</span>povo</td>
+              <td>990円/30日</td><td class="na">—</td><td>100Mbps</td><td>有料</td><td>au</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">申込む</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><span class="emoji">📱</span>各キャリアの詳細</div>
+      <p class="section-sub">編集部おすすめ順に詳しく解説！</p>
+      <div class="cards">
+        <div class="card">
+          <div class="card-badge-row">
+            <span class="pop-badge-lg badge-popular">🥇 人気No.1</span>
+            <span class="pop-badge-lg badge-cheap">⚡ 速度130Mbps</span>
+          </div>
+          <div class="card-name">ahamo（ドコモ）</div>
+          <div class="card-tag-row">
+            <span class="tag tag-orange">20GB最安級</span>
+            <span class="tag tag-blue">ドコモ回線</span>
+            <span class="tag tag-green">5分通話無料</span>
+          </div>
+          <div class="card-highlight"><strong>💡 こんな人におすすめ！</strong>データをよく使う方！5分以内の通話もたくさんかける方。ドコモ品質の回線をもっと安く！</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>3GBプラン</label><value>—</value></div>
+            <div class="spec-item"><label>20GBプラン</label><value>2,970円/月</value></div>
+            <div class="spec-item"><label>通信速度</label><value>⚡ 130Mbps</value></div>
+            <div class="spec-item"><label>通話</label><value>5分以内無料</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> ドコモ回線で安定した通信品質</p>
+            <p><span class="icon-plus">✓</span> 5分以内通話が無料付帯</p>
+            <p><span class="icon-plus">✓</span> 海外82か国で20GBまでローミング無料</p>
+            <p><span class="icon-minus">✗</span> 3GB以下の小容量プランがない</p>
+            <p><span class="icon-minus">✗</span> 店舗サポートなし</p>
+          </div>
+          <a href="#" class="card-cta">🎉 公式サイトで今すぐ申し込む</a>
+        </div>
+
+        <div class="card">
+          <div class="card-badge-row">
+            <span class="pop-badge-lg badge-popular">🥇 コスパNo.1</span>
+            <span class="pop-badge-lg badge-cheap">💰 3GB 990円!</span>
+          </div>
+          <div class="card-name">LINEMO（ソフトバンク）</div>
+          <div class="card-tag-row">
+            <span class="tag tag-orange">3GB最安</span>
+            <span class="tag tag-green">LINEギガフリー</span>
+            <span class="tag tag-blue">SB回線</span>
+          </div>
+          <div class="card-highlight"><strong>💡 こんな人におすすめ！</strong>LINEをよく使う方！データ使用量が少ない方。とにかく安くしたい方！</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>3GBプラン</label><value>💰 990円/月</value></div>
+            <div class="spec-item"><label>20GBプラン</label><value>2,728円/月</value></div>
+            <div class="spec-item"><label>通信速度</label><value>70Mbps</value></div>
+            <div class="spec-item"><label>通話</label><value>有料（22円/30秒）</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> LINEのデータ消費がゼロ（ギガフリー）</p>
+            <p><span class="icon-plus">✓</span> 3GBが990円と業界最安級</p>
+            <p><span class="icon-plus">✓</span> ソフトバンク品質の回線</p>
+            <p><span class="icon-minus">✗</span> 通話無料なし</p>
+            <p><span class="icon-minus">✗</span> 店舗サポートなし</p>
+          </div>
+          <a href="#" class="card-cta">🎉 公式サイトで今すぐ申し込む</a>
+        </div>
+
+        <div class="card">
+          <div class="card-badge-row">
+            <span class="pop-badge-lg badge-popular">🥉 サポートNo.1</span>
+            <span class="pop-badge-lg" style="background:#DCFCE7;color:#166534">🏪 店舗サポート◎</span>
+          </div>
+          <div class="card-name">UQモバイル（au）</div>
+          <div class="card-tag-row">
+            <span class="tag tag-blue">au回線</span>
+            <span class="tag tag-green">店舗◎</span>
+            <span class="tag tag-orange">家族割</span>
+          </div>
+          <div class="card-highlight"><strong>💡 こんな人におすすめ！</strong>スマホの操作が不安な方！店舗でサポートを受けたい方。auユーザーでセット割を活用したい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>3GBプラン</label><value>1,628円/月</value></div>
+            <div class="spec-item"><label>20GBプラン</label><value>3,278円/月</value></div>
+            <div class="spec-item"><label>通信速度</label><value>80Mbps</value></div>
+            <div class="spec-item"><label>通話</label><value>有料</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> au回線で速度・品質が安定</p>
+            <p><span class="icon-plus">✓</span> auショップでサポートを受けられる</p>
+            <p><span class="icon-plus">✓</span> 家族割で更に割引</p>
+            <p><span class="icon-minus">✗</span> 他サブブランドより料金高め</p>
+          </div>
+          <a href="#" class="card-cta">🎉 公式サイトで今すぐ申し込む</a>
+        </div>
+
+        <div class="card">
+          <div class="card-badge-row">
+            <span class="pop-badge-lg badge-popular">第5位</span>
+            <span class="pop-badge-lg badge-free">📞 通話無制限無料!</span>
+          </div>
+          <div class="card-name">楽天モバイル</div>
+          <div class="card-tag-row">
+            <span class="tag tag-red">通話無制限</span>
+            <span class="tag tag-orange">段階料金</span>
+            <span class="tag tag-green">楽天ポイント</span>
+          </div>
+          <div class="card-highlight"><strong>💡 こんな人におすすめ！</strong>電話をよくかける方！Rakuten Linkアプリで通話無制限無料。楽天ポイントも貯まる！</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>〜3GBプラン</label><value>1,078円/月</value></div>
+            <div class="spec-item"><label>〜20GBプラン</label><value>2,178円/月</value></div>
+            <div class="spec-item"><label>通信速度</label><value>55Mbps</value></div>
+            <div class="spec-item"><label>通話</label><value>無制限無料(アプリ)</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> Rakuten Linkで通話無制限無料</p>
+            <p><span class="icon-plus">✓</span> データ使用量に応じた段階料金</p>
+            <p><span class="icon-minus">✗</span> 自社回線エリア外はパートナー回線</p>
+            <p><span class="icon-minus">✗</span> 速度がやや不安定</p>
+          </div>
+          <a href="#" class="card-cta">🎉 公式サイトで今すぐ申し込む</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><span class="emoji">🎯</span>格安SIMの選び方</div>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <div class="guide-num">1</div>
+          <h3>データ使用量を確認！</h3>
+          <p>現在のスマホのデータ使用量を確認！3GB以下ならLINEMOが最安。20GB以上ならahamoが断然お得です。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">2</div>
+          <h3>通話頻度で選ぼう！</h3>
+          <p>電話をよくかける方は楽天モバイル（無制限無料）かahamo（5分無料）が有利。LINEMOなどは通話オプションが別途必要です。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">3</div>
+          <h3>サポートは重要！</h3>
+          <p>スマホの設定が苦手な方は店舗サポートのあるUQモバイル・ワイモバイルが安心。オンライン完結のキャリアはその分費用が安め。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">4</div>
+          <h3>回線品質もチェック！</h3>
+          <p>大手キャリア直営サブブランド（ahamo・UQ・LINEMO）は品質が安定！格安SIM（IIJmio等）は昼時間帯に遅くなる場合があります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title"><span class="emoji">❓</span>よくある質問</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            格安SIMに乗り換えると電話番号は使えますか？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">はい、MNP（番号ポータビリティ）を利用することで現在の電話番号をそのまま引き継げます！MNP転出は現在のキャリアへ申請して転出番号を取得後、新しいキャリアへ申し込みます。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            iPhoneでも使えますか？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">SIMロック解除済みのiPhoneであれば全て使えます！2021年以降に販売されたiPhoneはSIMロックなしで販売されています。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            格安SIMは速度が遅いって本当？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">大手キャリアのサブブランド（ahamo・UQ・LINEMO）は速度が安定しています。一方、IIJmio・mineoなどは昼の12〜13時に速度が落ちることがあります。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            SIMのみ契約と端末セット購入はどちらがお得？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">既に使えるスマホがあればSIMのみの契約が断然お得！端末セット購入は分割払いになり結果的に高くなるケースも。まずは手持ちの端末でSIMのみ契約を検討しましょう！</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            乗り換えにかかる費用はどのくらい？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">MNP転出手数料は現在無料です！ただし現在の契約の解約金（0〜1万円程度）がかかる場合があります。新しいキャリアの初期費用は各社3,000円前後が多いです。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>📱 格安SIMに乗り換えて年間6万円節約しよう！</h2>
+        <p>大手キャリアから乗り換えで月3,000〜5,000円の節約に！その分を貯蓄や投資に回そう！</p>
+        <a href="#" class="cta-banner-btn">🏆 ahamoの公式サイトへ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">プライバシーポリシー</a><a href="#">広告掲載について</a><a href="#">運営者情報</a><a href="#">お問い合わせ</a>
+    </div>
+    <p class="footer-note">当サイトはアフィリエイト広告を掲載しています。掲載情報は2026年4月2日時点のものです。料金・プランは予告なく変更される場合があります。</p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}
+</script>
+</body>
+</html>

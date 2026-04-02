@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>クレジットカード おすすめ比較ランキング【2026年4月最新】</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#F8FAFC;color:#1E293B;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Header */
+header{background:#fff;border-bottom:1px solid #E2E8F0;position:sticky;top:0;z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-size:1.1rem;font-weight:700;color:#2563EB}
+.logo span{color:#1E293B}
+nav{display:flex;gap:24px;font-size:.85rem}
+nav a{color:#64748B}
+nav a:hover{color:#2563EB}
+.pr-badge{font-size:.7rem;background:#FEF9C3;color:#92400E;border:1px solid #FDE68A;padding:2px 8px;border-radius:4px}
+
+/* Hero */
+.hero{background:#fff;border-bottom:1px solid #E2E8F0;padding:48px 0 40px}
+.hero-tag{display:inline-block;background:#EFF6FF;color:#2563EB;font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.hero h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;line-height:1.3;margin-bottom:12px}
+.hero h1 span{color:#2563EB}
+.hero-sub{color:#64748B;font-size:.95rem;margin-bottom:20px}
+.hero-meta{display:flex;align-items:center;gap:16px;font-size:.82rem;color:#94A3B8}
+.hero-meta strong{color:#475569}
+.update-date{font-size:.8rem;color:#94A3B8;background:#F1F5F9;padding:3px 10px;border-radius:4px}
+
+/* Breadcrumb */
+.breadcrumb{padding:12px 0;font-size:.8rem;color:#94A3B8}
+.breadcrumb a{color:#2563EB}
+.breadcrumb span{margin:0 6px}
+
+/* Section */
+section{padding:40px 0}
+section+section{border-top:1px solid #E2E8F0}
+.section-title{font-size:1.4rem;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.section-title::before{content:'';display:inline-block;width:4px;height:1.4em;background:#2563EB;border-radius:2px}
+.section-sub{color:#64748B;font-size:.9rem;margin-bottom:28px}
+
+/* Table */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:720px}
+thead th{background:#2563EB;color:#fff;padding:12px 14px;font-size:.82rem;font-weight:600;text-align:center;white-space:nowrap}
+thead th:first-child{text-align:left;border-radius:12px 0 0 0}
+thead th:last-child{border-radius:0 12px 0 0}
+tbody tr:nth-child(even){background:#F8FAFC}
+tbody tr:hover{background:#EFF6FF}
+tbody td{padding:12px 14px;font-size:.88rem;text-align:center;border-bottom:1px solid #F1F5F9}
+tbody td:first-child{text-align:left;font-weight:600}
+.rank{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;font-size:.75rem;font-weight:700;margin-right:8px}
+.rank-1{background:#FFD700;color:#7C5A00}
+.rank-2{background:#C0C0C0;color:#444}
+.rank-3{background:#CD7F32;color:#fff}
+.rank-other{background:#E2E8F0;color:#64748B}
+.stars{color:#F59E0B;letter-spacing:1px}
+.cta-btn{display:inline-block;background:#2563EB;color:#fff;font-size:.8rem;font-weight:600;padding:6px 16px;border-radius:6px;white-space:nowrap}
+.cta-btn:hover{background:#1D4ED8}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:4px;margin-left:4px}
+.badge-new{background:#DCFCE7;color:#166534}
+.badge-hot{background:#FEE2E2;color:#991B1B}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.card{background:#fff;border-radius:12px;border:1px solid #E2E8F0;padding:24px;transition:box-shadow .2s}
+.card:hover{box-shadow:0 4px 16px rgba(37,99,235,.1);border-color:#BFDBFE}
+.card-rank{font-size:.8rem;font-weight:700;color:#2563EB;margin-bottom:8px}
+.card-name{font-size:1.1rem;font-weight:700;margin-bottom:4px}
+.card-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tag{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px;background:#EFF6FF;color:#2563EB}
+.tag-purple{background:#F3E8FF;color:#7E22CE}
+.tag-green{background:#DCFCE7;color:#166534}
+.tag-red{background:#FEE2E2;color:#991B1B}
+.card-specs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.spec-item label{display:block;font-size:.72rem;color:#94A3B8;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.spec-item value{display:block;font-size:.9rem;font-weight:600;color:#1E293B}
+.card-divider{border:none;border-top:1px solid #F1F5F9;margin:16px 0}
+.merit-demerit{font-size:.82rem}
+.merit-demerit p{display:flex;gap:6px;margin-bottom:4px}
+.merit-demerit .icon-plus{color:#16A34A}
+.merit-demerit .icon-minus{color:#DC2626}
+.card-cta{display:block;text-align:center;background:#2563EB;color:#fff;font-weight:700;padding:12px;border-radius:8px;margin-top:16px;font-size:.9rem}
+.card-cta:hover{background:#1D4ED8}
+.card-recommend{background:#FFF8E7;border:1px solid #FDE68A;border-radius:8px;padding:10px 14px;font-size:.82rem;margin-bottom:12px;color:#92400E}
+.card-recommend strong{display:block;font-size:.75rem;margin-bottom:2px;color:#B45309}
+
+/* Guide */
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.guide-item{background:#fff;border-radius:12px;border:1px solid #E2E8F0;padding:20px}
+.guide-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#2563EB;color:#fff;border-radius:50%;font-weight:700;font-size:.9rem;margin-bottom:12px}
+.guide-item h3{font-size:.95rem;font-weight:700;margin-bottom:6px}
+.guide-item p{font-size:.82rem;color:#64748B}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:8px}
+.faq-item{background:#fff;border-radius:10px;border:1px solid #E2E8F0;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:16px 20px;font-size:.9rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q:hover{background:#F8FAFC}
+.faq-q .icon{color:#2563EB;font-size:1.2rem;transition:transform .2s;flex-shrink:0}
+.faq-q[aria-expanded="true"] .icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 20px 16px;font-size:.87rem;color:#475569;line-height:1.7}
+.faq-item.open .faq-a{display:block}
+
+/* CTA Banner */
+.cta-banner{background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 100%);border-radius:16px;padding:32px;text-align:center;color:#fff;margin:16px 0}
+.cta-banner h2{font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.cta-banner p{font-size:.9rem;opacity:.9;margin-bottom:20px}
+.cta-banner-btn{display:inline-block;background:#fff;color:#2563EB;font-weight:700;padding:12px 32px;border-radius:8px;font-size:.95rem}
+.cta-banner-btn:hover{background:#EFF6FF}
+
+/* Footer */
+footer{background:#fff;border-top:1px solid #E2E8F0;padding:32px 0;margin-top:40px}
+.footer-note{font-size:.78rem;color:#94A3B8;line-height:1.7}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;font-size:.82rem}
+.footer-links a{color:#64748B}
+
+/* Responsive */
+@media(max-width:640px){
+  nav{display:none}
+  .hero{padding:32px 0 24px}
+  .cards{grid-template-columns:1fr}
+  .guide-grid{grid-template-columns:1fr 1fr}
+  .card-specs{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">hikaku<span>navi</span></div>
+      <nav>
+        <a href="#">クレジットカード</a>
+        <a href="#">光回線</a>
+        <a href="#">格安SIM</a>
+        <a href="#">NISA</a>
+      </nav>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="#">TOP</a><span>›</span>
+      <a href="#">クレジットカード</a><span>›</span>
+      比較ランキング
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="container">
+      <div class="hero-tag">2026年4月 最新版</div>
+      <h1>クレジットカード<br><span>おすすめ比較ランキング</span></h1>
+      <p class="hero-sub">還元率・年会費・特典を徹底比較。あなたに最適な1枚が見つかる。</p>
+      <div class="hero-meta">
+        <span class="update-date">最終更新: 2026年4月2日</span>
+        <strong>編集部が独自調査</strong>
+        <span>掲載8枚</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="section-title">比較表</div>
+      <p class="section-sub">主要クレジットカード8枚を一覧で比較。<small>※ 当サイトはアフィリエイト広告を掲載しています</small></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>カード名</th>
+              <th>年会費</th>
+              <th>還元率</th>
+              <th>ポイント</th>
+              <th>旅行保険</th>
+              <th>審査通過率</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>三井住友カード(NL)<span class="badge badge-hot">人気</span></td>
+              <td>永年無料</td>
+              <td>0.5〜7%</td>
+              <td>Vポイント</td>
+              <td>○</td>
+              <td><span class="stars">★★★</span></td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-1">1</span>JCBカードW<span class="badge badge-new">高還元</span></td>
+              <td>永年無料</td>
+              <td>1.0〜10.5%</td>
+              <td>Oki Dokiポイント</td>
+              <td>○</td>
+              <td><span class="stars">★★★</span></td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>楽天カード</td>
+              <td>永年無料</td>
+              <td>1.0〜3.0%</td>
+              <td>楽天ポイント</td>
+              <td>○</td>
+              <td><span class="stars">★★★★</span></td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>dカード</td>
+              <td>永年無料</td>
+              <td>1.0%</td>
+              <td>dポイント</td>
+              <td>×</td>
+              <td><span class="stars">★★★★</span></td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>PayPayカード</td>
+              <td>永年無料</td>
+              <td>1.0%</td>
+              <td>PayPayポイント</td>
+              <td>×</td>
+              <td><span class="stars">★★★★</span></td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">6</span>エポスカード</td>
+              <td>永年無料</td>
+              <td>0.5%</td>
+              <td>エポスポイント</td>
+              <td>◎</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">7</span>イオンカード</td>
+              <td>永年無料</td>
+              <td>0.5〜1.0%</td>
+              <td>WAON POINT</td>
+              <td>×</td>
+              <td><span class="stars">★★★★</span></td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">8</span>au PAYカード</td>
+              <td>永年無料※</td>
+              <td>1.0%</td>
+              <td>Pontaポイント</td>
+              <td>○</td>
+              <td><span class="stars">★★★★</span></td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">詳細を見る</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ au PAYカード: auまたはUQモバイル契約者以外は年会費1,375円</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">各カード詳細</div>
+      <p class="section-sub">編集部がおすすめ度の高い順に詳しく解説します</p>
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-rank">🥇 第1位（同率）</div>
+          <div class="card-name">三井住友カード(NL)</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag tag-red">最大7%還元</span>
+            <span class="tag">ナンバーレス</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>コンビニ・マクドナルドをよく使う方。特定店舗での高還元を最大限活用したい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>0.5%</value></div>
+            <div class="spec-item"><label>最大還元率</label><value>7.0%</value></div>
+            <div class="spec-item"><label>ポイント</label><value>Vポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> コンビニ3社・マクドで最大7%還元</p>
+            <p><span class="icon-plus">✓</span> カード番号が表面に記載なし（セキュリティ高）</p>
+            <p><span class="icon-plus">✓</span> 最短10秒でカード番号発行</p>
+            <p><span class="icon-minus">✗</span> 通常還元率は0.5%とやや低め</p>
+            <p><span class="icon-minus">✗</span> 特定店舗以外では恩恵が少ない</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">🥇 第1位（同率）</div>
+          <div class="card-name">JCBカードW</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag tag-red">最大10.5%還元</span>
+            <span class="tag tag-purple">39歳以下限定</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>Amazon・スターバックスをよく利用する39歳以下の方。高い還元率を求める方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>1.0%</value></div>
+            <div class="spec-item"><label>最大還元率</label><value>10.5%</value></div>
+            <div class="spec-item"><label>ポイント</label><value>Oki Dokiポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 常に基本の2倍（1.0%）のポイント還元</p>
+            <p><span class="icon-plus">✓</span> Amazonで常時2%以上還元</p>
+            <p><span class="icon-plus">✓</span> 海外旅行傷害保険が自動付帯</p>
+            <p><span class="icon-minus">✗</span> 申込は18〜39歳限定</p>
+            <p><span class="icon-minus">✗</span> JCBのため海外では使えない店舗も</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">🥉 第3位</div>
+          <div class="card-name">楽天カード</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag tag-green">楽天市場3%</span>
+            <span class="tag">審査通りやすい</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>楽天市場・楽天サービスをよく使う方。楽天ポイントを貯めたい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>1.0%</value></div>
+            <div class="spec-item"><label>楽天市場還元率</label><value>3.0%〜</value></div>
+            <div class="spec-item"><label>ポイント</label><value>楽天ポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 楽天市場でポイント3倍（実質3%還元）</p>
+            <p><span class="icon-plus">✓</span> 審査が比較的緩やか</p>
+            <p><span class="icon-plus">✓</span> 楽天ポイントで電子マネーとしても使用可</p>
+            <p><span class="icon-minus">✗</span> 楽天市場以外は1%止まり</p>
+            <p><span class="icon-minus">✗</span> 近年改悪が続いている</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第4位</div>
+          <div class="card-name">dカード</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag">ドコモユーザー向け</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>ドコモユーザー。ドコモの携帯料金でポイントを貯めたい方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>1.0%</value></div>
+            <div class="spec-item"><label>旅行保険</label><value>×</value></div>
+            <div class="spec-item"><label>ポイント</label><value>dポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> ドコモのケータイ代金のポイント還元</p>
+            <p><span class="icon-plus">✓</span> コンビニで使えるdポイントに還元</p>
+            <p><span class="icon-minus">✗</span> 旅行傷害保険なし</p>
+            <p><span class="icon-minus">✗</span> ドコモユーザー以外はメリット薄</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第5位</div>
+          <div class="card-name">PayPayカード</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag">PayPay連動</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>PayPayをよく使う方。Yahoo!ショッピングをよく使う方。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>1.0%</value></div>
+            <div class="spec-item"><label>旅行保険</label><value>×</value></div>
+            <div class="spec-item"><label>ポイント</label><value>PayPayポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> Yahoo!ショッピングで最大5%還元</p>
+            <p><span class="icon-plus">✓</span> PayPayと連動でスマート決済</p>
+            <p><span class="icon-minus">✗</span> 旅行傷害保険なし</p>
+            <p><span class="icon-minus">✗</span> Visa/Mastercardのみ（JCBなし）</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+        <div class="card">
+          <div class="card-rank">第6位</div>
+          <div class="card-name">エポスカード</div>
+          <div class="card-tag-row">
+            <span class="tag">永年無料</span>
+            <span class="tag tag-green">海外保険◎</span>
+            <span class="tag">審査ゆるい</span>
+          </div>
+          <div class="card-recommend"><strong>こんな人におすすめ</strong>海外旅行が多い方。審査に自信がない方の最初の1枚に。</div>
+          <div class="card-specs">
+            <div class="spec-item"><label>年会費</label><value>永年無料</value></div>
+            <div class="spec-item"><label>基本還元率</label><value>0.5%</value></div>
+            <div class="spec-item"><label>旅行保険</label><value>◎（自動付帯）</value></div>
+            <div class="spec-item"><label>ポイント</label><value>エポスポイント</value></div>
+          </div>
+          <hr class="card-divider">
+          <div class="merit-demerit">
+            <p><span class="icon-plus">✓</span> 海外旅行傷害保険が自動付帯（無料）</p>
+            <p><span class="icon-plus">✓</span> 審査通過率が高く初心者向け</p>
+            <p><span class="icon-minus">✗</span> 基本還元率0.5%と低め</p>
+            <p><span class="icon-minus">✗</span> マルイユーザー以外の恩恵が少ない</p>
+          </div>
+          <a href="#" class="card-cta">公式サイトで申し込む →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">クレジットカードの選び方</div>
+      <p class="section-sub">4つのポイントで自分に合ったカードを見つけよう</p>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <div class="guide-num">1</div>
+          <h3>年会費と還元率のバランス</h3>
+          <p>年会費無料カードでも還元率1%以上のものが増えています。まず「永年無料」かつ「還元率1%以上」を基準に絞り込みましょう。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">2</div>
+          <h3>よく使うサービスと連携</h3>
+          <p>楽天ヘビーユーザーは楽天カード、ドコモユーザーはdカード、PayPayユーザーはPayPayカードなど、生活圏に合わせた選択が鉄則。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">3</div>
+          <h3>旅行保険の有無を確認</h3>
+          <p>年に1回以上海外旅行をする方は、旅行傷害保険付きカードが断然お得。エポスカードは無料で自動付帯が強み。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">4</div>
+          <h3>ポイントの使いやすさ</h3>
+          <p>ポイントが貯まっても使えなければ意味なし。汎用性が高い「Vポイント」「楽天ポイント」「dポイント」は特にコンビニ等でも使いやすい。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            クレジットカードの審査に落ちたことがあります。おすすめは？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">審査通過率が高いカードとして「エポスカード」と「イオンカード」が有名です。特にエポスカードはその場で審査が完了し、即日発行も可能。パート・アルバイトの方でも申し込みやすいカードです。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            複数枚持ちはOK？メインとサブの使い分けは？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">複数枚持ちは全く問題ありません。一般的な使い分けは「メインカード（高還元）＋旅行保険付きカード」がおすすめ。三井住友(NL)をメインに、エポスカードを旅行用に持つ方が多いです。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            ポイントはどれくらいの期間で失効しますか？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">カードによって異なります。楽天ポイントは最終獲得から1年、Vポイントは獲得月から2年が基本です。dポイントも有効期限は最終利用から48ヶ月。失効前にアプリで確認するクセをつけましょう。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            学生でも申し込めるカードはありますか？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">はい、ほとんどの年会費無料カードは学生でも申し込み可能です。JCBカードWは18〜39歳限定のため学生にも最適。楽天カードも学生に人気が高いカードです。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">
+            キャッシュバックとポイント還元、どちらが得ですか？
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-a">使い方次第ですが、一般的にはポイント還元の方が1ポイント=1円以上の価値になるケースがあり有利です。ただしポイントを使わず失効させてしまう方にはキャッシュバック型が向いています。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-banner">
+        <h2>🎯 あなたにぴったりのクレジットカードを今すぐ申し込もう</h2>
+        <p>全て年会費永年無料。審査は最短即日。キャンペーン中は入会ボーナスも。</p>
+        <a href="#" class="cta-banner-btn">ランキング1位の公式サイトへ</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">広告掲載について</a>
+      <a href="#">運営者情報</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+    <p class="footer-note">
+      当サイトはアフィリエイト広告（Amazonアソシエイト含む）を掲載しています。掲載情報は2026年4月2日時点のものです。最新情報は各公式サイトでご確認ください。<br>
+      ※ 還元率・特典は変更される場合があります。審査結果は各カード会社が独自に判断します。
+    </p>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false')});
+  if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
+}
+</script>
+</body>
+</html>
