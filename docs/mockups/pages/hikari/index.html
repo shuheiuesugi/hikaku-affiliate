@@ -25,6 +25,7 @@
 .housing-tab{display:flex;gap:0;border-radius:8px;overflow:hidden;border:1px solid #E2E8F0;margin-bottom:24px;width:fit-content}
 .housing-btn{padding:10px 28px;font-weight:700;font-size:.9rem;border:none;cursor:pointer;background:#F8FAFC;color:#64748B;transition:all .15s}
 .housing-btn.active{background:#2563EB;color:#fff}
+.logo-cell{display:flex;align-items:center;gap:8px}
 </style>
 </head>
 <body>
@@ -33,6 +34,10 @@
 
 <div class="hero">
   <div class="container">
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&h=400&fit=crop" alt="光回線 WiFiルーター" class="hero-image" loading="lazy">
+      <div class="hero-image-overlay"></div>
+    </div>
     <div class="hero-tag">2026年4月 最新版</div>
     <h1>光回線<span>おすすめ比較</span><br>ランキング</h1>
     <p class="hero-sub">速度・月額料金・キャッシュバックを徹底比較。マンション・戸建て別に最適な回線が見つかる。</p>
@@ -118,7 +123,12 @@
           </thead>
           <tbody id="hikari-tbody">
             <tr data-mansion="5,200円" data-house="5,200円">
-              <td><span class="rank rank-1">1</span>NURO光<span class="badge badge-hot">速度No.1</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/nuro.jp" alt="NURO光" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">N</span>
+                  <span><span class="rank rank-1">1</span>NURO光<span class="badge badge-hot">速度No.1</span></span>
+                </div>
+              </td>
               <td class="price-cell">5,200円</td>
               <td>580 Mbps</td>
               <td><strong class="highlight-amount">45,000円</strong></td>
@@ -127,7 +137,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-mansion="4,400円" data-house="5,720円">
-              <td><span class="rank rank-1">1</span>ドコモ光<span class="badge badge-new">ドコモ割</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/docomo.ne.jp" alt="ドコモ光" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">d</span>
+                  <span><span class="rank rank-1">1</span>ドコモ光<span class="badge badge-new">ドコモ割</span></span>
+                </div>
+              </td>
               <td class="price-cell">4,400円</td>
               <td>270 Mbps</td>
               <td><strong class="highlight-amount">38,000円</strong></td>
@@ -136,7 +151,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-mansion="4,180円" data-house="5,720円">
-              <td><span class="rank rank-3">3</span>ソフトバンク光</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/softbank.jp" alt="ソフトバンク光" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">SB</span>
+                  <span><span class="rank rank-3">3</span>ソフトバンク光</span>
+                </div>
+              </td>
               <td class="price-cell">4,180円</td>
               <td>310 Mbps</td>
               <td><strong class="highlight-amount">37,000円</strong></td>
@@ -145,7 +165,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-mansion="4,180円" data-house="5,610円">
-              <td><span class="rank rank-other">4</span>auひかり</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/au.com" alt="auひかり" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">au</span>
+                  <span><span class="rank rank-other">4</span>auひかり</span>
+                </div>
+              </td>
               <td class="price-cell">4,180円</td>
               <td>470 Mbps</td>
               <td><strong class="highlight-amount">72,000円</strong></td>
@@ -154,7 +179,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-mansion="4,180円" data-house="5,280円">
-              <td><span class="rank rank-other">5</span>楽天ひかり</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/rakuten.co.jp" alt="楽天ひかり" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">楽</span>
+                  <span><span class="rank rank-other">5</span>楽天ひかり</span>
+                </div>
+              </td>
               <td class="price-cell">4,180円</td>
               <td>220 Mbps</td>
               <td>なし</td>
@@ -163,7 +193,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-mansion="4,378円" data-house="5,478円">
-              <td><span class="rank rank-other">6</span>ビッグローブ光</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/biglobe.ne.jp" alt="ビッグローブ光" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">BG</span>
+                  <span><span class="rank rank-other">6</span>ビッグローブ光</span>
+                </div>
+              </td>
               <td class="price-cell">4,378円</td>
               <td>250 Mbps</td>
               <td><strong>40,000円</strong></td>
@@ -197,7 +232,10 @@
       <div class="cards">
         <div class="card">
           <div class="card-rank">🥇 速度No.1 / おすすめ第1位（同率）</div>
-          <div class="card-name">NURO光</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/nuro.jp" alt="NURO光" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">N</span>
+            <div class="card-name">NURO光</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag tag-red">実測580Mbps</span>
             <span class="tag">独自回線</span>
@@ -225,7 +263,10 @@
         </div>
         <div class="card">
           <div class="card-rank">🥇 おすすめ第1位（同率）</div>
-          <div class="card-name">ドコモ光</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/docomo.ne.jp" alt="ドコモ光" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">d</span>
+            <div class="card-name">ドコモ光</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag tag-green">ドコモ割最大1,100円</span>
             <span class="tag">全国エリア</span>
@@ -252,7 +293,10 @@
         </div>
         <div class="card">
           <div class="card-rank">4位 CB最大</div>
-          <div class="card-name">auひかり</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/au.com" alt="auひかり" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">au</span>
+            <div class="card-name">auひかり</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag tag-red">CB最大72,000円</span>
             <span class="tag">470Mbps</span>
@@ -281,9 +325,61 @@
     </div>
   </section>
 
+  <!-- 診断バナー -->
   <section style="background:#fff">
     <div class="container">
+      <div class="diagnosis-banner">
+        <div class="diagnosis-header">
+          <span class="diagnosis-icon">🔍</span>
+          <h3>あなたにぴったりの光回線を診断</h3>
+          <p>3つの質問に答えるだけで最適な回線がわかります</p>
+        </div>
+        <div class="diagnosis-body" id="hikari-diagnosis">
+          <div class="diagnosis-step active" data-step="1">
+            <p class="question">Q1. お住まいの住居タイプは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="hikariNext(2,'a')">マンション</button>
+              <button class="option-btn" onclick="hikariNext(2,'b')">戸建て</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="2">
+            <p class="question">Q2. 使っているスマホのキャリアは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="hikariNext(3,'a')">ドコモ</button>
+              <button class="option-btn" onclick="hikariNext(3,'b')">au / UQ</button>
+              <button class="option-btn" onclick="hikariNext(3,'c')">ソフトバンク / Y!mobile</button>
+              <button class="option-btn" onclick="hikariNext(3,'d')">楽天 / その他</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="3">
+            <p class="question">Q3. 最も重視することは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="hikariResult('a')">月額料金</button>
+              <button class="option-btn" onclick="hikariResult('b')">通信速度</button>
+              <button class="option-btn" onclick="hikariResult('c')">キャッシュバック</button>
+            </div>
+          </div>
+          <div class="diagnosis-result" id="hikari-diag-result">
+            <h4>あなたにおすすめの光回線は...</h4>
+            <div class="result-card">
+              <img id="hikari-diag-logo" src="" alt="" class="logo-img-lg" loading="lazy" style="display:block;margin:0 auto 8px" onerror="this.style.display='none'">
+              <div class="result-card-name" id="hikari-diag-name"></div>
+              <div class="result-card-desc" id="hikari-diag-desc"></div>
+              <a href="#" class="diagnosis-cta">公式サイトへ →</a>
+            </div>
+            <button class="diagnosis-restart" onclick="hikariRestart()">最初からやり直す</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <div class="section-title">光回線の選び方</div>
+
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1200&h=300&fit=crop" alt="リモートワーク" class="section-image" loading="lazy">
+
       <div class="guide-grid">
         <div class="guide-item">
           <div class="guide-num">1</div>
@@ -355,5 +451,53 @@
   <a href="#">auひかり 公式へ</a>
 </div>
 
+<script>
+var hikariAnswers = [];
+
+function hikariNext(step, val) {
+  hikariAnswers.push(val);
+  document.querySelectorAll('#hikari-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  var nextEl = document.querySelector('#hikari-diagnosis [data-step="' + step + '"]');
+  if (nextEl) nextEl.classList.add('active');
+}
+
+function hikariResult(val) {
+  hikariAnswers.push(val);
+  var carrier = hikariAnswers[1] || 'd'; // Q2の回答
+  var results = {
+    'a': { name:'ドコモ光', desc:'ドコモユーザー最大1,100円/月割引！全国対応で安心。', logo:'https://logo.clearbit.com/docomo.ne.jp' },
+    'b': { name:'auひかり', desc:'CB最大72,000円でお得！速度も470Mbpsと高水準。', logo:'https://logo.clearbit.com/au.com' },
+    'c': { name:'auひかり', desc:'CB最大72,000円で業界最高水準のキャッシュバック！', logo:'https://logo.clearbit.com/au.com' }
+  };
+  // キャリアで分岐
+  var carrierMap = {
+    'a': { name:'ドコモ光', desc:'ドコモセット割で月最大1,100円節約できます。', logo:'https://logo.clearbit.com/docomo.ne.jp' },
+    'b': { name:'auひかり', desc:'au/UQセット割＋CB最大72,000円でコスパ最高！', logo:'https://logo.clearbit.com/au.com' },
+    'c': { name:'NURO光', desc:'ソフトバンクユーザーはCB最大55,000円＋最速580Mbps！', logo:'https://logo.clearbit.com/nuro.jp' },
+    'd': { name:'楽天ひかり', desc:'楽天モバイルとのセットで割引あり。料金もリーズナブル。', logo:'https://logo.clearbit.com/rakuten.co.jp' }
+  };
+  // 最終的にQ3重視で上書き
+  if (val === 'b') {
+    var r = { name:'NURO光', desc:'国内最速580Mbps！速度最優先ならNURO光一択です。', logo:'https://logo.clearbit.com/nuro.jp' };
+  } else if (val === 'c') {
+    var r = { name:'auひかり', desc:'CB最大72,000円で業界トップ！費用を最大限回収できます。', logo:'https://logo.clearbit.com/au.com' };
+  } else {
+    var r = carrierMap[carrier] || carrierMap['d'];
+  }
+  document.getElementById('hikari-diag-name').textContent = r.name;
+  document.getElementById('hikari-diag-desc').textContent = r.desc;
+  document.getElementById('hikari-diag-logo').src = r.logo;
+  document.getElementById('hikari-diag-logo').alt = r.name;
+  document.querySelectorAll('#hikari-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById('hikari-diag-result').style.display = 'block';
+}
+
+function hikariRestart() {
+  hikariAnswers = [];
+  document.getElementById('hikari-diag-result').style.display = 'none';
+  document.querySelectorAll('#hikari-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelector('#hikari-diagnosis [data-step="1"]').classList.add('active');
+}
+</script>
 </body>
 </html>

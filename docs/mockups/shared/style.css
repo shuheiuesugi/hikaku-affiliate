@@ -227,6 +227,47 @@ footer{background:#fff;border-top:1px solid var(--color-border);padding:32px 0;m
 .footer-links a{color:var(--color-text-muted)}
 .footer-copy{font-size:.75rem;color:#94A3B8;margin-top:8px}
 
+/* ---- Logo Image ---- */
+.logo-img{width:32px;height:32px;border-radius:8px;object-fit:contain;background:#fff;border:1px solid #e2e8f0;flex-shrink:0;vertical-align:middle}
+.logo-img-lg{width:48px;height:48px;border-radius:8px;object-fit:contain;background:#fff;border:1px solid #e2e8f0;flex-shrink:0}
+.logo-fallback{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:8px;background:var(--color-primary-light);color:var(--color-primary);font-weight:800;font-size:.85rem;flex-shrink:0;border:1px solid #BFDBFE}
+.logo-fallback-lg{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:8px;background:var(--color-primary-light);color:var(--color-primary);font-weight:800;font-size:1.1rem;flex-shrink:0;border:1px solid #BFDBFE}
+.card-logo-wrap{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+
+/* ---- Hero Image ---- */
+.hero-image-wrap{position:relative;margin-bottom:24px;border-radius:12px;overflow:hidden}
+.hero-image{width:100%;height:240px;object-fit:cover;border-radius:12px;display:block}
+.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.5) 100%);border-radius:12px}
+.section-image{width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;margin:20px 0}
+
+/* ---- Diagnosis Banner ---- */
+.diagnosis-banner{background:linear-gradient(135deg,#EFF6FF 0%,#DBEAFE 100%);border:2px solid #BFDBFE;border-radius:16px;padding:32px;margin:40px 0;text-align:center}
+.diagnosis-header h3{font-size:1.3rem;font-weight:700;margin:8px 0 4px}
+.diagnosis-icon{font-size:2rem;display:block}
+.diagnosis-header p{font-size:.88rem;color:#475569;margin-bottom:0}
+.diagnosis-body{margin-top:24px;text-align:left;max-width:560px;margin-left:auto;margin-right:auto}
+.diagnosis-step{display:none}
+.diagnosis-step.active{display:block}
+.question{font-size:.95rem;font-weight:700;margin-bottom:14px;color:#1E293B;text-align:center}
+.options{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.option-btn{display:inline-block;background:#fff;border:2px solid #2563EB;color:#2563EB;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:600;font-size:.88rem;transition:all .2s;font-family:inherit}
+.option-btn:hover{background:#2563EB;color:#fff}
+.diagnosis-result{display:none;text-align:center}
+.diagnosis-result h4{font-size:1.05rem;font-weight:700;margin-bottom:16px;color:#1E293B}
+.result-card{background:#fff;border-radius:12px;border:2px solid #BFDBFE;padding:20px;display:inline-block;min-width:240px;margin:0 auto}
+.result-card-name{font-size:1.1rem;font-weight:800;color:#1E293B;margin:10px 0 6px}
+.result-card-desc{font-size:.82rem;color:#475569;margin-bottom:14px}
+.diagnosis-cta{display:inline-block;background:#2563EB;color:#fff;font-weight:700;padding:12px 28px;border-radius:8px;font-size:.9rem;margin-top:4px}
+.diagnosis-cta:hover{background:#1D4ED8}
+.diagnosis-restart{background:none;border:none;color:#64748B;font-size:.82rem;cursor:pointer;margin-top:12px;display:block;margin-left:auto;margin-right:auto;text-decoration:underline;font-family:inherit}
+
+/* ---- Sub-page Link Banner ---- */
+.sub-link-banner{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:12px;padding:20px 24px;margin:32px 0;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.sub-link-banner-text{flex:1;font-size:.88rem;color:#475569}
+.sub-link-banner-text strong{display:block;font-size:.95rem;color:#1E293B;margin-bottom:2px}
+.sub-link-banner a{background:#2563EB;color:#fff;font-weight:700;padding:10px 20px;border-radius:8px;font-size:.88rem;white-space:nowrap}
+.sub-link-banner a:hover{background:#1D4ED8}
+
 /* ---- Responsive ---- */
 @media(max-width:768px){
   .global-nav{display:none}

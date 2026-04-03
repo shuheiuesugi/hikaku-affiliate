@@ -21,6 +21,9 @@
   ]
 }
 </script>
+<style>
+.logo-cell{display:flex;align-items:center;gap:8px}
+</style>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
 
 <div class="hero">
   <div class="container">
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&h=400&fit=crop" alt="NISA 投資チャート" class="hero-image" loading="lazy">
+      <div class="hero-image-overlay"></div>
+    </div>
     <div class="hero-tag">2026年4月 最新版</div>
     <h1>NISA証券口座<br><span>おすすめ比較</span>ランキング</h1>
     <p class="hero-sub">手数料・投信本数・アプリ評価・ポイント還元で6社を徹底比較。NISAを始めるなら口座選びが最重要。</p>
@@ -72,7 +79,12 @@
           </thead>
           <tbody>
             <tr>
-              <td><span class="rank rank-1">1</span>SBI証券<span class="badge badge-hot">投信No.1</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/sbisec.co.jp" alt="SBI証券" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">SBI</span>
+                  <span><span class="rank rank-1">1</span>SBI証券<span class="badge badge-hot">投信No.1</span></span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>◎</td>
               <td><strong class="highlight-amount">2,600本</strong></td>
@@ -82,7 +94,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr>
-              <td><span class="rank rank-1">1</span>楽天証券<span class="badge badge-new">アプリNo.1</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/rakuten-sec.co.jp" alt="楽天証券" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">楽</span>
+                  <span><span class="rank rank-1">1</span>楽天証券<span class="badge badge-new">アプリNo.1</span></span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>◎</td>
               <td><strong>2,500本</strong></td>
@@ -92,7 +109,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr>
-              <td><span class="rank rank-3">3</span>マネックス証券</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/monex.co.jp" alt="マネックス証券" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">MX</span>
+                  <span><span class="rank rank-3">3</span>マネックス証券</span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>◎</td>
               <td>1,700本</td>
@@ -102,7 +124,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr>
-              <td><span class="rank rank-other">4</span>松井証券</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/matsui.co.jp" alt="松井証券" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">松</span>
+                  <span><span class="rank rank-other">4</span>松井証券</span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>◎</td>
               <td>1,800本</td>
@@ -112,7 +139,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr>
-              <td><span class="rank rank-other">5</span>auカブコム証券</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/kabu.com" alt="auカブコム証券" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">au</span>
+                  <span><span class="rank rank-other">5</span>auカブコム証券</span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>◎</td>
               <td>1,700本</td>
@@ -122,7 +154,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr>
-              <td><span class="rank rank-other">6</span>大和コネクト</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/connect-sec.co.jp" alt="大和コネクト" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">大</span>
+                  <span><span class="rank rank-other">6</span>大和コネクト</span>
+                </div>
+              </td>
               <td><strong>無料</strong></td>
               <td>○</td>
               <td>50本</td>
@@ -183,7 +220,10 @@
       <div class="cards">
         <div class="card">
           <div class="card-rank">🥇 総合第1位（同率）</div>
-          <div class="card-name">SBI証券</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/sbisec.co.jp" alt="SBI証券" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">SBI</span>
+            <div class="card-name">SBI証券</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag tag-red">投信2,600本</span>
             <span class="tag">手数料無料</span>
@@ -207,7 +247,10 @@
         </div>
         <div class="card">
           <div class="card-rank">🥇 総合第1位（同率）</div>
-          <div class="card-name">楽天証券</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/rakuten-sec.co.jp" alt="楽天証券" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">楽</span>
+            <div class="card-name">楽天証券</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag tag-red">アプリ4.4★</span>
             <span class="tag">楽天ポイント</span>
@@ -231,7 +274,10 @@
         </div>
         <div class="card">
           <div class="card-rank">3位</div>
-          <div class="card-name">マネックス証券</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/monex.co.jp" alt="マネックス証券" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">MX</span>
+            <div class="card-name">マネックス証券</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">手数料無料</span>
             <span class="tag">米国株◎</span>
@@ -256,9 +302,62 @@
     </div>
   </section>
 
+  <!-- 診断バナー -->
   <section style="background:#fff">
     <div class="container">
+      <div class="diagnosis-banner">
+        <div class="diagnosis-header">
+          <span class="diagnosis-icon">🔍</span>
+          <h3>あなたにぴったりのNISA証券口座を診断</h3>
+          <p>3つの質問に答えるだけで最適な証券会社がわかります</p>
+        </div>
+        <div class="diagnosis-body" id="nisa-diagnosis">
+          <div class="diagnosis-step active" data-step="1">
+            <p class="question">Q1. 投資経験はありますか？</p>
+            <div class="options">
+              <button class="option-btn" onclick="nisaNext(2,'a')">初めて</button>
+              <button class="option-btn" onclick="nisaNext(2,'b')">少しある</button>
+              <button class="option-btn" onclick="nisaNext(2,'c')">経験豊富</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="2">
+            <p class="question">Q2. 最も重視することは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="nisaNext(3,'a')">手数料の安さ</button>
+              <button class="option-btn" onclick="nisaNext(3,'b')">投信の種類</button>
+              <button class="option-btn" onclick="nisaNext(3,'c')">アプリの使いやすさ</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="3">
+            <p class="question">Q3. 普段貯めているポイントは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="nisaResult('a')">楽天ポイント</button>
+              <button class="option-btn" onclick="nisaResult('b')">Tポイント/Vポイント</button>
+              <button class="option-btn" onclick="nisaResult('c')">Pontaポイント</button>
+              <button class="option-btn" onclick="nisaResult('d')">特になし</button>
+            </div>
+          </div>
+          <div class="diagnosis-result" id="nisa-diag-result">
+            <h4>あなたにおすすめのNISA口座は...</h4>
+            <div class="result-card">
+              <img id="nisa-diag-logo" src="" alt="" class="logo-img-lg" loading="lazy" style="display:block;margin:0 auto 8px" onerror="this.style.display='none'">
+              <div class="result-card-name" id="nisa-diag-name"></div>
+              <div class="result-card-desc" id="nisa-diag-desc"></div>
+              <a href="#" class="diagnosis-cta">公式サイトへ →</a>
+            </div>
+            <button class="diagnosis-restart" onclick="nisaRestart()">最初からやり直す</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <div class="section-title">NISA口座の選び方</div>
+
+      <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?w=1200&h=300&fit=crop" alt="資産運用" class="section-image" loading="lazy">
+
       <div class="guide-grid">
         <div class="guide-item">
           <div class="guide-num">1</div>
@@ -334,5 +433,46 @@
   <a href="#">楽天証券 公式へ</a>
 </div>
 
+<script>
+var nisaAnswers = [];
+
+function nisaNext(step, val) {
+  nisaAnswers.push(val);
+  document.querySelectorAll('#nisa-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  var nextEl = document.querySelector('#nisa-diagnosis [data-step="' + step + '"]');
+  if (nextEl) nextEl.classList.add('active');
+}
+
+function nisaResult(val) {
+  nisaAnswers.push(val);
+  var results = {
+    'a': { name:'楽天証券', desc:'楽天ポイントで積立！アプリ評価4.4★で使いやすさNo.1。', logo:'https://logo.clearbit.com/rakuten-sec.co.jp' },
+    'b': { name:'SBI証券', desc:'Vポイント・Tポイントで積立可能！投信2,600本で選択肢最大。', logo:'https://logo.clearbit.com/sbisec.co.jp' },
+    'c': { name:'auカブコム証券', desc:'Pontaポイントで積立！au経済圏ユーザーにおすすめ。', logo:'https://logo.clearbit.com/kabu.com' },
+    'd': { name:'SBI証券', desc:'業界最多の投信2,600本＋手数料無料でNISAを最大活用。', logo:'https://logo.clearbit.com/sbisec.co.jp' }
+  };
+  // Q2（重視点）がアプリなら楽天優先
+  if (nisaAnswers[1] === 'c') {
+    var r = { name:'楽天証券', desc:'アプリ評価4.4★で業界No.1！初心者でも直感的に操作できます。', logo:'https://logo.clearbit.com/rakuten-sec.co.jp' };
+  } else if (nisaAnswers[1] === 'b') {
+    var r = { name:'マネックス証券', desc:'投信1,700本＋米国株4,500銘柄で幅広い投資に対応。', logo:'https://logo.clearbit.com/monex.co.jp' };
+  } else {
+    var r = results[val] || results['d'];
+  }
+  document.getElementById('nisa-diag-name').textContent = r.name;
+  document.getElementById('nisa-diag-desc').textContent = r.desc;
+  document.getElementById('nisa-diag-logo').src = r.logo;
+  document.getElementById('nisa-diag-logo').alt = r.name;
+  document.querySelectorAll('#nisa-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById('nisa-diag-result').style.display = 'block';
+}
+
+function nisaRestart() {
+  nisaAnswers = [];
+  document.getElementById('nisa-diag-result').style.display = 'none';
+  document.querySelectorAll('#nisa-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelector('#nisa-diagnosis [data-step="1"]').classList.add('active');
+}
+</script>
 </body>
 </html>

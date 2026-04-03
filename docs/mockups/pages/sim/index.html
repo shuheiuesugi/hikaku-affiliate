@@ -27,6 +27,7 @@
 .slider-label strong{color:#2563EB;font-size:1rem}
 #capacity-slider{width:100%;accent-color:#2563EB;cursor:pointer}
 .capacity-result{background:#EFF6FF;border-radius:8px;padding:16px;margin-top:12px;font-size:.88rem}
+.logo-cell{display:flex;align-items:center;gap:8px}
 </style>
 </head>
 <body>
@@ -35,6 +36,10 @@
 
 <div class="hero">
   <div class="container">
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&h=400&fit=crop" alt="格安SIM スマートフォン" class="hero-image" loading="lazy">
+      <div class="hero-image-overlay"></div>
+    </div>
     <div class="hero-tag">2026年4月 最新版</div>
     <h1>格安SIM<span>おすすめ比較</span><br>ランキング</h1>
     <p class="hero-sub">月額料金・通信速度・データ容量で8社を徹底比較。容量スライダーで最適プランを探せる。</p>
@@ -114,7 +119,12 @@
           </thead>
           <tbody>
             <tr data-line="docomo">
-              <td><span class="rank rank-1">1</span>ahamo<span class="badge badge-hot">速度No.1</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/docomo.ne.jp" alt="ahamo" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">a</span>
+                  <span><span class="rank rank-1">1</span>ahamo<span class="badge badge-hot">速度No.1</span></span>
+                </div>
+              </td>
               <td>—</td>
               <td><strong class="highlight-amount">2,970円</strong></td>
               <td>130 Mbps</td>
@@ -124,7 +134,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="softbank">
-              <td><span class="rank rank-1">1</span>LINEMO<span class="badge badge-new">最安3GB</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/linemo.jp" alt="LINEMO" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">L</span>
+                  <span><span class="rank rank-1">1</span>LINEMO<span class="badge badge-new">最安3GB</span></span>
+                </div>
+              </td>
               <td><strong class="highlight-amount">990円</strong></td>
               <td><strong>2,728円</strong></td>
               <td>70 Mbps</td>
@@ -134,7 +149,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="au">
-              <td><span class="rank rank-3">3</span>UQモバイル</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/uqwimax.jp" alt="UQモバイル" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">UQ</span>
+                  <span><span class="rank rank-3">3</span>UQモバイル</span>
+                </div>
+              </td>
               <td>1,628円</td>
               <td>3,278円</td>
               <td>80 Mbps</td>
@@ -144,7 +164,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="softbank">
-              <td><span class="rank rank-other">4</span>ワイモバイル</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/ymobile.jp" alt="ワイモバイル" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">Y!</span>
+                  <span><span class="rank rank-other">4</span>ワイモバイル</span>
+                </div>
+              </td>
               <td>2,178円</td>
               <td>4,158円</td>
               <td>65 Mbps</td>
@@ -154,7 +179,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="au">
-              <td><span class="rank rank-other">5</span>楽天モバイル</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/rakuten.co.jp" alt="楽天モバイル" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">楽</span>
+                  <span><span class="rank rank-other">5</span>楽天モバイル</span>
+                </div>
+              </td>
               <td>1,078円</td>
               <td>2,178円</td>
               <td>55 Mbps</td>
@@ -164,7 +194,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="docomo">
-              <td><span class="rank rank-other">6</span>IIJmio</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/iijmio.jp" alt="IIJmio" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">II</span>
+                  <span><span class="rank rank-other">6</span>IIJmio</span>
+                </div>
+              </td>
               <td><strong class="highlight-amount">990円</strong></td>
               <td>2,000円</td>
               <td>45 Mbps</td>
@@ -174,7 +209,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="au">
-              <td><span class="rank rank-other">7</span>mineo</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/mineo.jp" alt="mineo" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">mi</span>
+                  <span><span class="rank rank-other">7</span>mineo</span>
+                </div>
+              </td>
               <td>1,298円</td>
               <td>2,178円</td>
               <td>40 Mbps</td>
@@ -184,7 +224,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-line="au">
-              <td><span class="rank rank-other">8</span>povo</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/povo.jp" alt="povo" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">po</span>
+                  <span><span class="rank rank-other">8</span>povo</span>
+                </div>
+              </td>
               <td>990円/30日</td>
               <td>—</td>
               <td>100 Mbps</td>
@@ -248,9 +293,61 @@
     </div>
   </section>
 
+  <!-- 診断バナー -->
   <section style="background:#fff">
     <div class="container">
+      <div class="diagnosis-banner">
+        <div class="diagnosis-header">
+          <span class="diagnosis-icon">🔍</span>
+          <h3>あなたにぴったりの格安SIMを診断</h3>
+          <p>3つの質問に答えるだけで最適なプランがわかります</p>
+        </div>
+        <div class="diagnosis-body" id="sim-diagnosis">
+          <div class="diagnosis-step active" data-step="1">
+            <p class="question">Q1. 月のデータ使用量はどのくらいですか？</p>
+            <div class="options">
+              <button class="option-btn" onclick="simNext(2,'a')">3GB以下</button>
+              <button class="option-btn" onclick="simNext(2,'b')">3〜20GB</button>
+              <button class="option-btn" onclick="simNext(2,'c')">20GB以上</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="2">
+            <p class="question">Q2. 電話通話はどのくらいしますか？</p>
+            <div class="options">
+              <button class="option-btn" onclick="simNext(3,'a')">ほぼしない</button>
+              <button class="option-btn" onclick="simNext(3,'b')">たまにする</button>
+              <button class="option-btn" onclick="simNext(3,'c')">よくする</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="3">
+            <p class="question">Q3. 最も重視することは？</p>
+            <div class="options">
+              <button class="option-btn" onclick="simResult('a')">月額料金</button>
+              <button class="option-btn" onclick="simResult('b')">通信速度</button>
+              <button class="option-btn" onclick="simResult('c')">家族割</button>
+            </div>
+          </div>
+          <div class="diagnosis-result" id="sim-diag-result">
+            <h4>あなたにおすすめの格安SIMは...</h4>
+            <div class="result-card">
+              <img id="sim-diag-logo" src="" alt="" class="logo-img-lg" loading="lazy" style="display:block;margin:0 auto 8px" onerror="this.style.display='none'">
+              <div class="result-card-name" id="sim-diag-name"></div>
+              <div class="result-card-desc" id="sim-diag-desc"></div>
+              <a href="#" class="diagnosis-cta">公式サイトへ →</a>
+            </div>
+            <button class="diagnosis-restart" onclick="simRestart()">最初からやり直す</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <div class="section-title">よくある質問（FAQ）</div>
+
+      <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=1200&h=300&fit=crop" alt="スマホ利用" class="section-image" loading="lazy">
+
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">格安SIMで最も安いのはどこですか？<span class="icon">+</span></button>
@@ -268,7 +365,7 @@
     </div>
   </section>
 
-  <section>
+  <section style="background:#fff">
     <div class="container">
       <div class="section-title">関連ページ</div>
       <div class="related-grid">
@@ -294,5 +391,52 @@
   <a href="#">LINEMO 公式へ</a>
 </div>
 
+<script>
+var simAnswers = [];
+
+function simNext(step, val) {
+  simAnswers.push(val);
+  document.querySelectorAll('#sim-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  var nextEl = document.querySelector('#sim-diagnosis [data-step="' + step + '"]');
+  if (nextEl) nextEl.classList.add('active');
+}
+
+function simResult(val) {
+  simAnswers.push(val);
+  var data = simAnswers[0]; // Q1: データ容量
+  var results = {
+    'a': { // 月額重視
+      'a': { name:'LINEMO', desc:'3GBなら990円で最安！LINEギガフリー付きで日常使いに最適。', logo:'https://logo.clearbit.com/linemo.jp' },
+      'b': { name:'楽天モバイル', desc:'20GBで2,178円！通話アプリ無料でコスパ最高。', logo:'https://logo.clearbit.com/rakuten.co.jp' },
+      'c': { name:'楽天モバイル', desc:'無制限で3,278円！データ量を気にせず使える最安プラン。', logo:'https://logo.clearbit.com/rakuten.co.jp' }
+    },
+    'b': { // 速度重視
+      'a': { name:'ahamo', desc:'ドコモ回線130Mbpsで格安SIM最高速度！20GBで5分通話無料。', logo:'https://logo.clearbit.com/docomo.ne.jp' },
+      'b': { name:'ahamo', desc:'圧倒的な130Mbpsの速度！20GBで2,970円とコスパも◎。', logo:'https://logo.clearbit.com/docomo.ne.jp' },
+      'c': { name:'UQモバイル', desc:'au回線80Mbpsで安定！家族割で更にお得になります。', logo:'https://logo.clearbit.com/uqwimax.jp' }
+    },
+    'c': { // 家族割重視
+      'a': { name:'ワイモバイル', desc:'家族割最大1,100円割引！子どものフィルタリングも充実。', logo:'https://logo.clearbit.com/ymobile.jp' },
+      'b': { name:'UQモバイル', desc:'家族割858円割引＋au回線の安定性で家族全員安心。', logo:'https://logo.clearbit.com/uqwimax.jp' },
+      'c': { name:'楽天モバイル', desc:'家族割なしでも元々安い！4人で月32,000円節約できます。', logo:'https://logo.clearbit.com/rakuten.co.jp' }
+    }
+  };
+  var dataKey = data || 'b';
+  var r = (results[val] && results[val][dataKey]) || { name:'ahamo', desc:'速度・料金・通話のバランスが最高のプランです。', logo:'https://logo.clearbit.com/docomo.ne.jp' };
+  document.getElementById('sim-diag-name').textContent = r.name;
+  document.getElementById('sim-diag-desc').textContent = r.desc;
+  document.getElementById('sim-diag-logo').src = r.logo;
+  document.getElementById('sim-diag-logo').alt = r.name;
+  document.querySelectorAll('#sim-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById('sim-diag-result').style.display = 'block';
+}
+
+function simRestart() {
+  simAnswers = [];
+  document.getElementById('sim-diag-result').style.display = 'none';
+  document.querySelectorAll('#sim-diagnosis .diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelector('#sim-diagnosis [data-step="1"]').classList.add('active');
+}
+</script>
 </body>
 </html>

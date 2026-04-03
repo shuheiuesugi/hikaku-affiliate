@@ -21,6 +21,9 @@
   ]
 }
 </script>
+<style>
+.logo-cell{display:flex;align-items:center;gap:8px}
+</style>
 </head>
 <body>
 
@@ -28,6 +31,10 @@
 
 <div class="hero">
   <div class="container">
+    <div class="hero-image-wrap">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=400&fit=crop" alt="クレジットカード比較" class="hero-image" loading="lazy">
+      <div class="hero-image-overlay"></div>
+    </div>
     <div class="hero-tag">2026年4月 最新版</div>
     <h1>クレジットカード<br><span>おすすめ比較ランキング</span></h1>
     <p class="hero-sub">還元率・年会費・特典を徹底比較。編集部が独自調査した8枚から、あなたに最適な1枚が見つかる。</p>
@@ -94,7 +101,12 @@
           </thead>
           <tbody>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-1">1</span>三井住友カード(NL)<span class="badge badge-hot">人気No.1</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/smbc-card.com" alt="三井住友カード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">三</span>
+                  <span><span class="rank rank-1">1</span>三井住友カード(NL)<span class="badge badge-hot">人気No.1</span></span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td><strong>0.5〜7%</strong></td>
               <td>Vポイント</td>
@@ -104,7 +116,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="jcb" data-feature="highreturn">
-              <td><span class="rank rank-1">1</span>JCBカードW<span class="badge badge-new">高還元</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/jcb.co.jp" alt="JCBカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">J</span>
+                  <span><span class="rank rank-1">1</span>JCBカードW<span class="badge badge-new">高還元</span></span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td><strong>1.0〜10.5%</strong></td>
               <td>Oki Dokiポイント</td>
@@ -114,7 +131,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-3">3</span>楽天カード</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/rakuten-card.co.jp" alt="楽天カード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">楽</span>
+                  <span><span class="rank rank-3">3</span>楽天カード</span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td><strong>1.0〜3.0%</strong></td>
               <td>楽天ポイント</td>
@@ -124,7 +146,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-other">4</span>dカード</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/d-card.jp" alt="dカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">d</span>
+                  <span><span class="rank rank-other">4</span>dカード</span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td><strong>1.0%</strong></td>
               <td>dポイント</td>
@@ -134,7 +161,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-other">5</span>PayPayカード</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/paypay-card.co.jp" alt="PayPayカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">P</span>
+                  <span><span class="rank rank-other">5</span>PayPayカード</span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td><strong>1.0%</strong></td>
               <td>PayPayポイント</td>
@@ -144,7 +176,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="insurance">
-              <td><span class="rank rank-other">6</span>エポスカード<span class="badge badge-new">保険◎</span></td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/eposcard.co.jp" alt="エポスカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">エ</span>
+                  <span><span class="rank rank-other">6</span>エポスカード<span class="badge badge-new">保険◎</span></span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td>0.5%</td>
               <td>エポスポイント</td>
@@ -154,7 +191,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-other">7</span>イオンカード</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/aeon.co.jp" alt="イオンカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">イ</span>
+                  <span><span class="rank rank-other">7</span>イオンカード</span>
+                </div>
+              </td>
               <td>永年無料</td>
               <td>0.5〜1.0%</td>
               <td>WAON POINT</td>
@@ -164,7 +206,12 @@
               <td><a href="#" class="cta-btn">公式サイトへ</a></td>
             </tr>
             <tr data-fee="free" data-brand="visa" data-feature="highreturn">
-              <td><span class="rank rank-other">8</span>au PAYカード</td>
+              <td>
+                <div class="logo-cell">
+                  <img src="https://logo.clearbit.com/au.com" alt="au PAYカード" class="logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback" style="display:none">au</span>
+                  <span><span class="rank rank-other">8</span>au PAYカード</span>
+                </div>
+              </td>
               <td>永年無料※</td>
               <td>1.0%</td>
               <td>Pontaポイント</td>
@@ -185,6 +232,55 @@
     </div>
   </section>
 
+  <!-- 診断バナー -->
+  <section style="background:#fff">
+    <div class="container">
+      <div class="diagnosis-banner">
+        <div class="diagnosis-header">
+          <span class="diagnosis-icon">🔍</span>
+          <h3>あなたにぴったりのクレジットカードを診断</h3>
+          <p>3つの質問に答えるだけで最適な1枚がわかります</p>
+        </div>
+        <div class="diagnosis-body" id="diagnosis">
+          <div class="diagnosis-step active" data-step="1">
+            <p class="question">Q1. クレジットカードで最も重視することは？</p>
+            <div class="options">
+              <button class="option-btn" data-next="2" data-value="a" onclick="diagNext(2,'a')">ポイント還元率</button>
+              <button class="option-btn" data-next="2" data-value="b" onclick="diagNext(2,'b')">旅行保険</button>
+              <button class="option-btn" data-next="2" data-value="c" onclick="diagNext(2,'c')">年会費の安さ</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="2">
+            <p class="question">Q2. 月の利用額はどのくらいですか？</p>
+            <div class="options">
+              <button class="option-btn" data-next="3" data-value="a" onclick="diagNext(3,'a')">3万円以下</button>
+              <button class="option-btn" data-next="3" data-value="b" onclick="diagNext(3,'b')">3〜10万円</button>
+              <button class="option-btn" data-next="3" data-value="c" onclick="diagNext(3,'c')">10万円以上</button>
+            </div>
+          </div>
+          <div class="diagnosis-step" data-step="3">
+            <p class="question">Q3. よく使うお店はどこですか？</p>
+            <div class="options">
+              <button class="option-btn" data-next="result" data-value="a" onclick="diagResult('a')">コンビニ中心</button>
+              <button class="option-btn" data-next="result" data-value="b" onclick="diagResult('b')">ネット通販中心</button>
+              <button class="option-btn" data-next="result" data-value="c" onclick="diagResult('c')">特になし</button>
+            </div>
+          </div>
+          <div class="diagnosis-result" id="diag-result">
+            <h4>あなたにおすすめのクレジットカードは...</h4>
+            <div class="result-card">
+              <img id="diag-logo" src="" alt="" class="logo-img-lg" loading="lazy" style="display:block;margin:0 auto 8px" onerror="this.style.display='none'">
+              <div class="result-card-name" id="diag-name"></div>
+              <div class="result-card-desc" id="diag-desc"></div>
+              <a href="#" class="diagnosis-cta">公式サイトへ →</a>
+            </div>
+            <button class="diagnosis-restart" onclick="diagRestart()">最初からやり直す</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <div class="section-title">各カード詳細レビュー</div>
@@ -193,7 +289,10 @@
 
         <div class="card" data-fee="free" data-brand="visa">
           <div class="card-rank">🥇 第1位（同率）</div>
-          <div class="card-name">三井住友カード(NL)</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/smbc-card.com" alt="三井住友カード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">三</span>
+            <div class="card-name">三井住友カード(NL)</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag tag-red">最大7%還元</span>
@@ -223,7 +322,10 @@
 
         <div class="card" data-fee="free" data-brand="jcb">
           <div class="card-rank">🥇 第1位（同率）</div>
-          <div class="card-name">JCBカードW</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/jcb.co.jp" alt="JCBカード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">J</span>
+            <div class="card-name">JCBカードW</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag tag-red">最大10.5%還元</span>
@@ -253,7 +355,10 @@
 
         <div class="card" data-fee="free" data-brand="visa">
           <div class="card-rank">🥉 第3位</div>
-          <div class="card-name">楽天カード</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/rakuten-card.co.jp" alt="楽天カード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">楽</span>
+            <div class="card-name">楽天カード</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag tag-red">楽天市場3倍</span>
@@ -282,7 +387,10 @@
 
         <div class="card" data-fee="free" data-brand="visa">
           <div class="card-rank">4位</div>
-          <div class="card-name">dカード</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/d-card.jp" alt="dカード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">d</span>
+            <div class="card-name">dカード</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag">dポイント</span>
@@ -307,7 +415,10 @@
 
         <div class="card" data-fee="free" data-brand="visa">
           <div class="card-rank">5位</div>
-          <div class="card-name">PayPayカード</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/paypay-card.co.jp" alt="PayPayカード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">P</span>
+            <div class="card-name">PayPayカード</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag">PayPay連携</span>
@@ -331,7 +442,10 @@
 
         <div class="card" data-fee="free" data-brand="visa">
           <div class="card-rank">6位</div>
-          <div class="card-name">エポスカード</div>
+          <div class="card-logo-wrap">
+            <img src="https://logo.clearbit.com/eposcard.co.jp" alt="エポスカード" class="logo-img-lg" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="logo-fallback-lg" style="display:none">エ</span>
+            <div class="card-name">エポスカード</div>
+          </div>
           <div class="card-tag-row">
             <span class="tag">永年無料</span>
             <span class="tag tag-green">海外保険◎</span>
@@ -373,6 +487,9 @@
     <div class="container">
       <div class="section-title">クレジットカードの選び方</div>
       <p class="section-sub">用途・ライフスタイルに合ったカードを選ぶ3つのポイント</p>
+
+      <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&h=300&fit=crop" alt="ショッピング" class="section-image" loading="lazy">
+
       <div class="guide-grid">
         <div class="guide-item">
           <div class="guide-num">1</div>
@@ -456,5 +573,39 @@
   <a href="#">JCBカードW 申込み</a>
 </div>
 
+<script>
+var diagAnswers = [];
+
+function diagNext(step, val) {
+  diagAnswers.push(val);
+  document.querySelectorAll('.diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  var nextEl = document.querySelector('[data-step="' + step + '"]');
+  if (nextEl) nextEl.classList.add('active');
+}
+
+function diagResult(val) {
+  diagAnswers.push(val);
+  // 結果ロジック: Q3の回答で主に分岐
+  var results = {
+    'a': { name:'三井住友カード(NL)', desc:'コンビニ最大7%還元！日常の買い物でガンガンポイントが貯まります。', logo:'https://logo.clearbit.com/smbc-card.com' },
+    'b': { name:'JCBカードW', desc:'Amazon・ネット通販で常時高還元。39歳以下なら最強の1枚。', logo:'https://logo.clearbit.com/jcb.co.jp' },
+    'c': { name:'楽天カード', desc:'基本1%還元で使いやすく、審査も通りやすい万能カード。', logo:'https://logo.clearbit.com/rakuten-card.co.jp' }
+  };
+  var r = results[val] || results['c'];
+  document.getElementById('diag-name').textContent = r.name;
+  document.getElementById('diag-desc').textContent = r.desc;
+  document.getElementById('diag-logo').src = r.logo;
+  document.getElementById('diag-logo').alt = r.name;
+  document.querySelectorAll('.diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById('diag-result').style.display = 'block';
+}
+
+function diagRestart() {
+  diagAnswers = [];
+  document.getElementById('diag-result').style.display = 'none';
+  document.querySelectorAll('.diagnosis-step').forEach(function(el){ el.classList.remove('active'); });
+  document.querySelector('[data-step="1"]').classList.add('active');
+}
+</script>
 </body>
 </html>
