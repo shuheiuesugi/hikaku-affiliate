@@ -2,183 +2,198 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HIKAKUnavi モック一覧</title>
-<link rel="stylesheet" href="shared/style.css">
-<script src="shared/nav.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HIKAKU — デザインモック</title>
 <style>
-.mock-index-hero{background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 100%);color:#fff;padding:48px 0;text-align:center}
-.mock-index-hero h1{font-size:2rem;font-weight:800;margin-bottom:8px}
-.mock-index-hero p{font-size:1rem;opacity:.9}
-.mock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:32px 0}
-.mock-category{background:#fff;border-radius:12px;border:1px solid #E2E8F0;overflow:hidden}
-.mock-category-header{background:#2563EB;color:#fff;padding:14px 20px;font-weight:700;font-size:1rem}
-.mock-category-body{padding:16px 20px}
-.mock-link{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #F1F5F9;font-size:.88rem}
-.mock-link:last-child{border-bottom:none}
-.mock-link a{color:#2563EB;font-weight:600}
-.mock-link a:hover{text-decoration:underline}
-.mock-link-desc{font-size:.75rem;color:#94A3B8;margin-top:2px}
-.page-badge{font-size:.68rem;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:12px;font-weight:600}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0F172A; --blue: #2563EB; --blue-light: #EFF6FF;
+    --bg: #F8FAFC; --card: #ffffff; --text: #1a1a2e; --muted: #6b7280;
+    --border: #e2e8f0; --green: #22c55e; --purple: #7C3AED;
+    --hikari: #059669; --sim: #EA580C; --nisa: #2563EB;
+  }
+  body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); }
+  .header { background: var(--navy); color: #fff; padding: 40px 48px; }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .header p { font-size: 14px; color: #93C5FD; letter-spacing: 0.1em; }
+  .header .meta { font-size: 12px; color: #6b7b8d; margin-top: 12px; }
+  .tabs { display: flex; gap: 0; background: #fff; border-bottom: 2px solid var(--border); padding: 0 48px; position: sticky; top: 0; z-index: 100; }
+  .tab { padding: 14px 24px; font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--blue); border-bottom-color: var(--blue); }
+  .section { display: none; padding: 32px 48px 64px; }
+  .section.active { display: block; }
+  .section-title { font-size: 20px; font-weight: 700; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+  .section-title .count { font-size: 12px; background: var(--blue-light); color: var(--blue); padding: 2px 10px; border-radius: 12px; }
+
+  /* Flow */
+  .flow-group { margin-bottom: 36px; }
+  .flow-label { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+  .flow-row { display: flex; align-items: center; gap: 0; flex-wrap: wrap; }
+  .flow-node { background: var(--card); border: 2px solid var(--border); border-radius: 8px; padding: 10px 18px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s; min-width: 120px; text-align: center; text-decoration: none; color: var(--text); line-height: 1.4; }
+  .flow-node:hover { border-color: var(--blue); box-shadow: 0 4px 12px rgba(37,99,235,0.2); transform: translateY(-2px); }
+  .flow-node.start { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .flow-node.ext { background: #fef3c7; border-color: #f59e0b; color: #92400e; border-style: dashed; }
+  .flow-node.end { background: #f0fdf4; border-color: var(--green); color: #166534; }
+  .flow-node .sub { font-size: 10px; opacity: 0.7; display: block; margin-top: 2px; }
+  .flow-arrow { width: 32px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-size: 16px; flex-shrink: 0; }
+  .legend { display: flex; gap: 20px; margin-bottom: 28px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 3px; border: 1px solid var(--border); }
+
+  /* Page grid */
+  .page-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-bottom: 16px; }
+  .page-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: all 0.2s; cursor: pointer; text-decoration: none; color: var(--text); display: block; }
+  .page-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-3px); border-color: var(--blue); }
+  .preview { width: 100%; height: 190px; border-bottom: 1px solid var(--border); overflow: hidden; position: relative; background: #f8f9fa; }
+  .preview iframe { width: 1280px; height: 900px; transform: scale(0.235); transform-origin: top left; pointer-events: none; border: none; }
+  .preview-overlay { position: absolute; inset: 0; }
+  .info { padding: 14px 16px; }
+  .info h3 { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+  .info .path { font-size: 11px; color: var(--muted); font-family: monospace; }
+  .info .badges { display: flex; gap: 6px; margin-top: 6px; }
+  .badge { font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+  .badge-public { background: #f0fdf4; color: #166534; }
+  .cat-header { display: flex; align-items: center; gap: 10px; margin: 28px 0 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+  .cat-header:first-child { margin-top: 0; }
+  .cat-dot { width: 10px; height: 10px; border-radius: 3px; }
+  .cat-header h3 { font-size: 14px; font-weight: 700; }
+  .cat-header .cnt { font-size: 11px; color: var(--muted); }
 </style>
 </head>
 <body>
-<div class="mock-index-hero">
-  <div class="container">
-    <h1>HIKAKUnavi モック一覧</h1>
-    <p>本番用モックアップ 15ページ — docs/mockups/</p>
+<div class="header">
+  <h1>HIKAKU — デザインモック</h1>
+  <p>価格比較アフィリエイトLP 全15ページ</p>
+  <div class="meta">2026-04-03 / Blue #2563EB × White #F8FAFC × system-ui</div>
+</div>
+<div class="tabs">
+  <div class="tab active" data-tab="flow">フロー図</div>
+  <div class="tab" data-tab="pages">全ページ一覧</div>
+  <a href="flowmap.html" class="tab" style="text-decoration:none;color:var(--muted)">スクリーンフローマップ ↗</a>
+</div>
+
+<!-- FLOW -->
+<div class="section active" id="flow">
+  <div class="section-title">ユーザーフロー <span class="count">6フロー</span></div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--navy)"></div>広告ランディング</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#fef3c7;border-color:#f59e0b;border-style:dashed"></div>外部サイト（Google広告/ASP先）</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#fff"></div>サイト内ページ</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f0fdf4;border-color:var(--green)"></div>コンバージョン</div>
+  </div>
+
+  <div class="flow-group"><div class="flow-label">1. 広告流入→クレカ比較</div><div class="flow-row">
+    <div class="flow-node ext">Google広告<span class="sub">流入</span></div><div class="flow-arrow">→</div>
+    <a href="pages/credit-card/index.html" class="flow-node start">クレカ総合</a><div class="flow-arrow">→</div>
+    <a href="pages/credit-card/high-return.html" class="flow-node">詳細カード</a><div class="flow-arrow">→</div>
+    <div class="flow-node ext end">公式サイト<span class="sub">ASP経由</span></div>
+  </div></div>
+
+  <div class="flow-group"><div class="flow-label">2. 広告流入→光回線比較</div><div class="flow-row">
+    <div class="flow-node ext">Google広告<span class="sub">流入</span></div><div class="flow-arrow">→</div>
+    <a href="pages/hikari/index.html" class="flow-node start">光回線総合</a><div class="flow-arrow">→</div>
+    <a href="pages/hikari/mansion.html" class="flow-node">マンション向け</a><div class="flow-arrow">→</div>
+    <div class="flow-node ext end">公式サイト<span class="sub">ASP経由</span></div>
+  </div></div>
+
+  <div class="flow-group"><div class="flow-label">3. 広告流入→格安SIM比較</div><div class="flow-row">
+    <div class="flow-node ext">Google広告<span class="sub">流入</span></div><div class="flow-arrow">→</div>
+    <a href="pages/sim/index.html" class="flow-node start">SIM総合</a><div class="flow-arrow">→</div>
+    <a href="pages/sim/data-plan.html" class="flow-node">データ容量別</a><div class="flow-arrow">→</div>
+    <a href="pages/sim/family.html" class="flow-node">家族向け</a><div class="flow-arrow">→</div>
+    <div class="flow-node ext end">公式サイト<span class="sub">ASP経由</span></div>
+  </div></div>
+
+  <div class="flow-group"><div class="flow-label">4. 広告流入→NISA比較</div><div class="flow-row">
+    <div class="flow-node ext">Google広告<span class="sub">流入</span></div><div class="flow-arrow">→</div>
+    <a href="pages/nisa/index.html" class="flow-node start">NISA総合</a><div class="flow-arrow">→</div>
+    <a href="pages/nisa/beginner.html" class="flow-node">初心者向け</a><div class="flow-arrow">→</div>
+    <a href="pages/nisa/fee.html" class="flow-node">手数料比較</a><div class="flow-arrow">→</div>
+    <div class="flow-node ext end">公式サイト<span class="sub">ASP経由</span></div>
+  </div></div>
+
+  <div class="flow-group"><div class="flow-label">5. サイト内回遊</div><div class="flow-row">
+    <a href="pages/top.html" class="flow-node">トップ</a><div class="flow-arrow">→</div>
+    <a href="pages/credit-card/index.html" class="flow-node">クレカ総合</a><div class="flow-arrow">→</div>
+    <a href="pages/hikari/index.html" class="flow-node">光回線総合</a><div class="flow-arrow">→</div>
+    <a href="pages/sim/index.html" class="flow-node">SIM総合</a><div class="flow-arrow">→</div>
+    <a href="pages/nisa/index.html" class="flow-node">NISA総合</a>
+  </div></div>
+
+  <div class="flow-group"><div class="flow-label">6. サブページ展開</div>
+    <div class="flow-row" style="margin-bottom:10px">
+      <a href="pages/credit-card/index.html" class="flow-node" style="border-color:#7C3AED;color:#7C3AED">クレカ総合</a><div class="flow-arrow">→</div>
+      <a href="pages/credit-card/no-fee.html" class="flow-node">年会費無料</a><div class="flow-arrow">/</div>
+      <a href="pages/credit-card/high-return.html" class="flow-node">高還元率</a>
+    </div>
+    <div class="flow-row" style="margin-bottom:10px">
+      <a href="pages/hikari/index.html" class="flow-node" style="border-color:#059669;color:#059669">光回線総合</a><div class="flow-arrow">→</div>
+      <a href="pages/hikari/mansion.html" class="flow-node">マンション</a><div class="flow-arrow">/</div>
+      <a href="pages/hikari/gaming.html" class="flow-node">ゲーミング</a>
+    </div>
+    <div class="flow-row" style="margin-bottom:10px">
+      <a href="pages/sim/index.html" class="flow-node" style="border-color:#EA580C;color:#EA580C">SIM総合</a><div class="flow-arrow">→</div>
+      <a href="pages/sim/data-plan.html" class="flow-node">データ容量別</a><div class="flow-arrow">/</div>
+      <a href="pages/sim/family.html" class="flow-node">家族向け</a>
+    </div>
+    <div class="flow-row">
+      <a href="pages/nisa/index.html" class="flow-node" style="border-color:#2563EB;color:#2563EB">NISA総合</a><div class="flow-arrow">→</div>
+      <a href="pages/nisa/beginner.html" class="flow-node">初心者</a><div class="flow-arrow">/</div>
+      <a href="pages/nisa/fee.html" class="flow-node">手数料</a>
+    </div>
   </div>
 </div>
 
-<main>
-  <div class="container">
-    <div class="mock-grid">
+<!-- PAGES -->
+<div class="section" id="pages">
+  <div class="section-title">全ページ一覧 <span class="count">15ページ</span></div>
+  <div id="pg"></div>
+</div>
 
-      <div class="mock-category">
-        <div class="mock-category-header">🏠 共通・トップ</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <a href="pages/top.html">トップページ</a>
-              <div class="mock-link-desc">全カテゴリ一覧・各カテゴリTop3プレビュー・最新更新情報</div>
-            </div>
-            <span class="page-badge">TOP</span>
-          </div>
-        </div>
-      </div>
+<script>
+document.querySelectorAll('.tab[data-tab]').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.section').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.tab).classList.add('active');
+}));
 
-      <div class="mock-category">
-        <div class="mock-category-header">💳 クレジットカード（3ページ）</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <a href="pages/credit-card/index.html">クレカ総合比較</a>
-              <div class="mock-link-desc">フィルタバー・8枚比較表・詳細カード・選び方ガイド・FAQ</div>
-            </div>
-            <span class="page-badge">INDEX</span>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/credit-card/no-fee.html">年会費無料カード比較</a>
-              <div class="mock-link-desc">年会費0円限定・還元率デフォルトソート</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/credit-card/high-return.html">高還元率カード比較</a>
-              <div class="mock-link-desc">還元率1%以上・年間ポイントシミュレーター付き</div>
-            </div>
-          </div>
-        </div>
-      </div>
+const cats = [
+  { name:'トップ', color:'#0F172A', items:[
+    {t:'トップページ', p:'/', f:'top.html', b:'public'},
+  ]},
+  { name:'クレジットカード', color:'#7C3AED', items:[
+    {t:'クレカ総合比較', p:'/credit-card/', f:'credit-card/index.html', b:'public'},
+    {t:'年会費無料', p:'/credit-card/no-fee', f:'credit-card/no-fee.html', b:'public'},
+    {t:'高還元率', p:'/credit-card/high-return', f:'credit-card/high-return.html', b:'public'},
+  ]},
+  { name:'光回線', color:'#059669', items:[
+    {t:'光回線総合比較', p:'/hikari/', f:'hikari/index.html', b:'public'},
+    {t:'マンション向け', p:'/hikari/mansion', f:'hikari/mansion.html', b:'public'},
+    {t:'ゲーミング回線', p:'/hikari/gaming', f:'hikari/gaming.html', b:'public'},
+  ]},
+  { name:'格安SIM', color:'#EA580C', items:[
+    {t:'格安SIM総合比較', p:'/sim/', f:'sim/index.html', b:'public'},
+    {t:'データ容量別', p:'/sim/data-plan', f:'sim/data-plan.html', b:'public'},
+    {t:'家族向け', p:'/sim/family', f:'sim/family.html', b:'public'},
+  ]},
+  { name:'NISA・証券口座', color:'#2563EB', items:[
+    {t:'NISA総合比較', p:'/nisa/', f:'nisa/index.html', b:'public'},
+    {t:'初心者向け', p:'/nisa/beginner', f:'nisa/beginner.html', b:'public'},
+    {t:'手数料比較', p:'/nisa/fee', f:'nisa/fee.html', b:'public'},
+  ]},
+];
 
-      <div class="mock-category">
-        <div class="mock-category-header">📡 光回線（3ページ）</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <a href="pages/hikari/index.html">光回線総合比較</a>
-              <div class="mock-link-desc">住居タイプ切替・速度横棒グラフ・CB強調</div>
-            </div>
-            <span class="page-badge">INDEX</span>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/hikari/mansion.html">マンション向け光回線</a>
-              <div class="mock-link-desc">マンション料金・エリア検索モック</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/hikari/gaming.html">ゲーミング光回線</a>
-              <div class="mock-link-desc">速度重視・Ping値・安定性データ</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mock-category">
-        <div class="mock-category-header">📱 格安SIM（3ページ）</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <a href="pages/sim/index.html">格安SIM総合比較</a>
-              <div class="mock-link-desc">容量スライダーフィルタ・8社料金比較表</div>
-            </div>
-            <span class="page-badge">INDEX</span>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/sim/data-plan.html">データ容量別比較</a>
-              <div class="mock-link-desc">3GB/20GB/無制限タブ切替</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/sim/family.html">家族向けSIM比較</a>
-              <div class="mock-link-desc">家族割シミュレーター（人数→各社合計額）</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mock-category">
-        <div class="mock-category-header">📈 NISA・投資（3ページ）</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <a href="pages/nisa/index.html">NISA総合比較</a>
-              <div class="mock-link-desc">手数料・投信本数・アプリ評価比較</div>
-            </div>
-            <span class="page-badge">INDEX</span>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/nisa/beginner.html">初心者向けNISA</a>
-              <div class="mock-link-desc">口座開設3ステップ・初心者FAQ充実</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <a href="pages/nisa/fee.html">NISA手数料比較</a>
-              <div class="mock-link-desc">取引金額→各社手数料シミュレーター</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mock-category">
-        <div class="mock-category-header">📁 共有リソース</div>
-        <div class="mock-category-body">
-          <div class="mock-link">
-            <div>
-              <span style="color:#64748B">shared/style.css</span>
-              <div class="mock-link-desc">デザイントークン + 全ページ共通CSS</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <span style="color:#64748B">shared/nav.js</span>
-              <div class="mock-link-desc">グローバルナビ・パンくず・FAQ・タブ・フィルタ</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <span style="color:#64748B">shared/mock-data.json</span>
-              <div class="mock-link-desc">全ページ共有モックデータ（クレカ・光回線・SIM・NISA）</div>
-            </div>
-          </div>
-          <div class="mock-link">
-            <div>
-              <span style="color:#64748B">sitemap.json</span>
-              <div class="mock-link-desc">ページ構造定義（title/path/parent/children）</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</main>
+const pg = document.getElementById('pg');
+cats.forEach(c => {
+  pg.innerHTML += `<div class="cat-header"><div class="cat-dot" style="background:${c.color}"></div><h3>${c.name}</h3><span class="cnt">${c.items.length}ページ</span></div>`;
+  let g = document.createElement('div'); g.className='page-grid';
+  c.items.forEach(p => {
+    g.innerHTML += `<a href="pages/${p.f}" class="page-card"><div class="preview"><iframe src="pages/${p.f}" loading="lazy" sandbox></iframe><div class="preview-overlay"></div></div><div class="info"><h3>${p.t}</h3><div class="path">${p.p}</div><div class="badges"><span class="badge badge-${p.b}">Public</span></div></div></a>`;
+  });
+  pg.appendChild(g);
+});
+</script>
 </body>
 </html>

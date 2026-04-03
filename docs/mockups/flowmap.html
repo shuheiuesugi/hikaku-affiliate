@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>HIKAKU — スクリーンフローマップ</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:#e8e8e8;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Noto Sans JP',sans-serif;overflow:auto}
+
+.toolbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:#0F172A;color:#fff;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.3)}
+.toolbar h1{font-size:15px;font-weight:700;letter-spacing:0.05em}
+.toolbar .controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.toolbar button{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 14px;font-size:11px;cursor:pointer;border-radius:4px}
+.toolbar button:hover{background:rgba(37,99,235,0.3);border-color:#2563EB}
+.toolbar button.active{background:#2563EB;color:#fff;border-color:#2563EB}
+.toolbar .zoom-label{font-size:11px;color:#9ca3af;margin:0 8px}
+
+.canvas{position:relative;width:6000px;height:4000px;margin-top:52px;transform-origin:0 0}
+
+.page-frame{position:absolute;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);overflow:hidden;transition:box-shadow 0.2s}
+.page-frame:hover{box-shadow:0 8px 32px rgba(37,99,235,0.3);z-index:10}
+.page-frame .frame-header{background:#f1f3f5;border-bottom:1px solid #e2e8f0;padding:6px 10px;display:flex;align-items:center;gap:6px;cursor:pointer}
+.page-frame .dots{display:flex;gap:4px}
+.page-frame .dot{width:8px;height:8px;border-radius:50%}
+.page-frame .dot-r{background:#ff5f57}
+.page-frame .dot-y{background:#febc2e}
+.page-frame .dot-g{background:#28c840}
+.page-frame .frame-url{font-size:9px;color:#9ca3af;margin-left:8px;letter-spacing:0.3px}
+.page-frame .frame-label{position:absolute;bottom:-28px;left:0;right:0;text-align:center;font-size:11px;font-weight:600;color:#374151;white-space:nowrap}
+.page-frame .frame-badge{display:inline-block;font-size:9px;padding:1px 6px;border-radius:3px;margin-left:4px;font-weight:600}
+.badge-p{background:#f0fdf4;color:#166534}
+.badge-cc{background:#F3E8FF;color:#6D28D9}
+.badge-hi{background:#D1FAE5;color:#065F46}
+.badge-si{background:#FFF7ED;color:#C2410C}
+.badge-ni{background:#EFF6FF;color:#1E40AF}
+.page-frame iframe{border:none;pointer-events:none}
+
+svg.arrows{position:absolute;top:0;left:0;width:6000px;height:4000px;pointer-events:none;z-index:5}
+svg.arrows path{fill:none;stroke:#0F172A;stroke-width:2;opacity:0.4;marker-end:url(#arrowhead)}
+svg.arrows path.highlight{stroke:#2563EB;stroke-width:3;opacity:0.9}
+
+.legend{position:fixed;bottom:16px;left:16px;z-index:1000;background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;font-size:11px;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.legend h3{font-size:11px;font-weight:700;margin-bottom:6px;color:#6b7280}
+.legend-row{display:flex;align-items:center;gap:6px;margin-bottom:3px}
+.legend-line{width:24px;height:2px;border-radius:1px}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <h1>HIKAKU — スクリーンフローマップ</h1>
+  <div class="controls">
+    <button onclick="setZoom(0.3)">30%</button>
+    <button onclick="setZoom(0.5)" class="active">50%</button>
+    <button onclick="setZoom(0.7)">70%</button>
+    <button onclick="setZoom(1)">100%</button>
+    <span class="zoom-label" id="zoomLabel">50%</span>
+    <button onclick="highlightFlow('cc')">クレカ</button>
+    <button onclick="highlightFlow('hikari')">光回線</button>
+    <button onclick="highlightFlow('sim')">SIM</button>
+    <button onclick="highlightFlow('nisa')">NISA</button>
+    <button onclick="highlightFlow('browse')">回遊</button>
+    <button onclick="highlightFlow('')">全表示</button>
+    <a href="index.html" style="color:#93C5FD;font-size:11px;margin-left:12px;text-decoration:none">← フロー図・一覧に戻る</a>
+  </div>
+</div>
+
+<div class="canvas" id="canvas">
+  <svg class="arrows" id="arrows">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#0F172A" opacity="0.5"/>
+      </marker>
+      <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+      </marker>
+    </defs>
+  </svg>
+</div>
+
+<div class="legend">
+  <h3>フロー凡例</h3>
+  <div class="legend-row"><div class="legend-line" style="background:#0F172A;opacity:0.4"></div> ページ遷移</div>
+  <div class="legend-row"><div class="legend-line" style="background:#2563EB"></div> ハイライト中フロー</div>
+  <div class="legend-row"><span class="frame-badge badge-cc">CC</span> クレカ</div>
+  <div class="legend-row"><span class="frame-badge badge-hi">HI</span> 光回線</div>
+  <div class="legend-row"><span class="frame-badge badge-si">SI</span> SIM</div>
+  <div class="legend-row"><span class="frame-badge badge-ni">NI</span> NISA</div>
+</div>
+
+<script>
+const W = 280, H = 420;
+const pages = [
+  // Row 1: トップ + メインカテゴリ (y=80)
+  { id:'top', title:'トップ', file:'top.html', path:'/', x:80, y:80, w:W, h:H, badge:'p' },
+  { id:'cc', title:'クレカ総合', file:'credit-card/index.html', path:'/credit-card/', x:500, y:80, w:W, h:H, badge:'cc' },
+  { id:'hikari', title:'光回線総合', file:'hikari/index.html', path:'/hikari/', x:920, y:80, w:W, h:H, badge:'hi' },
+  { id:'sim', title:'SIM総合', file:'sim/index.html', path:'/sim/', x:1340, y:80, w:W, h:H, badge:'si' },
+  { id:'nisa', title:'NISA総合', file:'nisa/index.html', path:'/nisa/', x:1760, y:80, w:W, h:H, badge:'ni' },
+
+  // Row 2: クレカサブ (y=600)
+  { id:'cc-nofee', title:'年会費無料', file:'credit-card/no-fee.html', path:'/credit-card/no-fee', x:360, y:600, w:W, h:H, badge:'cc' },
+  { id:'cc-high', title:'高還元率', file:'credit-card/high-return.html', path:'/credit-card/high-return', x:680, y:600, w:W, h:H, badge:'cc' },
+
+  // Row 2: 光回線サブ
+  { id:'hi-mansion', title:'マンション向け', file:'hikari/mansion.html', path:'/hikari/mansion', x:920, y:600, w:250, h:380, badge:'hi' },
+  { id:'hi-gaming', title:'ゲーミング', file:'hikari/gaming.html', path:'/hikari/gaming', x:1200, y:600, w:250, h:380, badge:'hi' },
+
+  // Row 2: SIMサブ
+  { id:'sim-data', title:'データ容量別', file:'sim/data-plan.html', path:'/sim/data-plan', x:1480, y:600, w:250, h:380, badge:'si' },
+  { id:'sim-family', title:'家族向け', file:'sim/family.html', path:'/sim/family', x:1760, y:600, w:250, h:380, badge:'si' },
+
+  // Row 2: NISAサブ
+  { id:'nisa-begin', title:'初心者向け', file:'nisa/beginner.html', path:'/nisa/beginner', x:2040, y:600, w:250, h:380, badge:'ni' },
+  { id:'nisa-fee', title:'手数料比較', file:'nisa/fee.html', path:'/nisa/fee', x:2320, y:600, w:250, h:380, badge:'ni' },
+];
+
+const connections = [
+  // トップ → 各カテゴリ
+  { from:'top', to:'cc', flow:'browse' },
+  { from:'top', to:'hikari', flow:'browse' },
+  { from:'top', to:'sim', flow:'browse' },
+  { from:'top', to:'nisa', flow:'browse' },
+  // クレカ → サブ
+  { from:'cc', to:'cc-nofee', flow:'cc' },
+  { from:'cc', to:'cc-high', flow:'cc' },
+  // 光回線 → サブ
+  { from:'hikari', to:'hi-mansion', flow:'hikari' },
+  { from:'hikari', to:'hi-gaming', flow:'hikari' },
+  // SIM → サブ
+  { from:'sim', to:'sim-data', flow:'sim' },
+  { from:'sim', to:'sim-family', flow:'sim' },
+  // NISA → サブ
+  { from:'nisa', to:'nisa-begin', flow:'nisa' },
+  { from:'nisa', to:'nisa-fee', flow:'nisa' },
+  // カテゴリ間回遊
+  { from:'cc', to:'hikari', flow:'browse' },
+  { from:'hikari', to:'sim', flow:'browse' },
+  { from:'sim', to:'nisa', flow:'browse' },
+];
+
+const badgeLabels = { cc:'CC', hi:'HI', si:'SI', ni:'NI', p:'PUB' };
+
+const canvas = document.getElementById('canvas');
+const svgEl = document.getElementById('arrows');
+const pageMap = {};
+
+// Render pages
+pages.forEach(p => {
+  pageMap[p.id] = p;
+  const scale = Math.min(p.w / 1280, p.h / 900);
+  const el = document.createElement('a');
+  el.href = 'pages/' + p.file;
+  el.className = 'page-frame';
+  el.id = 'frame-' + p.id;
+  el.style.cssText = `left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px`;
+  el.innerHTML = `
+    <div class="frame-header">
+      <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+      <span class="frame-url">${p.path}</span>
+    </div>
+    <iframe src="pages/${p.file}" style="width:1280px;height:${Math.floor(p.h/scale)}px;transform:scale(${scale.toFixed(4)});transform-origin:top left" loading="lazy" sandbox></iframe>
+    <div class="frame-label">${p.title} <span class="frame-badge badge-${p.badge}">${badgeLabels[p.badge]||p.badge.toUpperCase()}</span></div>
+  `;
+  canvas.appendChild(el);
+});
+
+// Draw arrows
+function drawArrows(highlightFlow) {
+  const paths = svgEl.querySelectorAll('path');
+  paths.forEach(p => p.remove());
+
+  connections.forEach(c => {
+    const from = pageMap[c.from], to = pageMap[c.to];
+    if (!from || !to) return;
+
+    const x1 = from.x + from.w, y1 = from.y + from.h / 2;
+    const x2 = to.x, y2 = to.y + to.h / 2;
+
+    const dx = Math.abs(x2 - x1);
+    const cp = Math.max(dx * 0.4, 60);
+    const d = `M${x1},${y1} C${x1+cp},${y1} ${x2-cp},${y2} ${x2},${y2}`;
+
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', d);
+
+    const isHighlighted = highlightFlow && c.flow === highlightFlow;
+    if (isHighlighted) {
+      path.classList.add('highlight');
+      path.style.markerEnd = 'url(#arrowhead-blue)';
+    }
+    if (highlightFlow && !isHighlighted) {
+      path.style.opacity = '0.08';
+    }
+
+    svgEl.appendChild(path);
+  });
+}
+
+drawArrows('');
+
+// Zoom
+let currentZoom = 0.5;
+canvas.style.transform = `scale(${currentZoom})`;
+
+function setZoom(z) {
+  currentZoom = z;
+  canvas.style.transform = `scale(${z})`;
+  document.getElementById('zoomLabel').textContent = Math.round(z*100) + '%';
+  document.querySelectorAll('.toolbar button').forEach(b => b.classList.remove('active'));
+}
+
+function highlightFlow(flow) {
+  drawArrows(flow);
+}
+</script>
+</body>
+</html>
