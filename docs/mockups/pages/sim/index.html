@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>格安SIMおすすめ比較ランキング【2026年4月最新】月額料金・速度を徹底比較</title>
+<link rel="stylesheet" href="../../shared/style.css">
+<script src="../../shared/nav.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"TOP","item":"https://hikaku-navi.example.com/"},
+      {"@type":"ListItem","position":2,"name":"格安SIM","item":"https://hikaku-navi.example.com/sim/"}
+    ]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"格安SIMで最も安いのはどこですか？","acceptedAnswer":{"@type":"Answer","text":"3GBプランはIIJmio・LINEMO・povo（30日）が990円で最安です。20GBはIIJmioの2,000円が最安です。"}},
+      {"@type":"Question","name":"格安SIMに乗り換えると通話品質は落ちますか？","acceptedAnswer":{"@type":"Answer","text":"大手3キャリア（ドコモ・au・ソフトバンク）の回線を借りているため通話品質は同等です。ただしahamoなどの一部プランはLINE通話やアプリ通話が別途料金になる場合があります。"}}
+    ]}
+  ]
+}
+</script>
+<style>
+.slider-wrap{margin:16px 0}
+.slider-label{display:flex;justify-content:space-between;font-size:.82rem;color:#64748B;margin-bottom:8px}
+.slider-label strong{color:#2563EB;font-size:1rem}
+#capacity-slider{width:100%;accent-color:#2563EB;cursor:pointer}
+.capacity-result{background:#EFF6FF;border-radius:8px;padding:16px;margin-top:12px;font-size:.88rem}
+</style>
+</head>
+<body>
+
+<div id="breadcrumb-placeholder" data-items='[{"label":"格安SIM比較"}]'></div>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">2026年4月 最新版</div>
+    <h1>格安SIM<span>おすすめ比較</span><br>ランキング</h1>
+    <p class="hero-sub">月額料金・通信速度・データ容量で8社を徹底比較。容量スライダーで最適プランを探せる。</p>
+    <div class="hero-meta">
+      <span class="update-date">最終更新: 2026年4月2日</span>
+      <strong>編集部が独自調査</strong>
+      <span>掲載8社</span>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="section-title">データ容量で絞り込む</div>
+      <p class="section-sub">月々のデータ使用量からスライダーで条件を設定してください</p>
+      <div class="slider-wrap">
+        <div class="slider-label">
+          月間データ使用量: <strong id="slider-val">20GB</strong>
+        </div>
+        <input type="range" id="capacity-slider" min="0" max="4" value="2" step="1">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:#94A3B8;margin-top:4px">
+          <span>〜1GB</span><span>〜3GB</span><span>〜20GB</span><span>〜50GB</span><span>無制限</span>
+        </div>
+      </div>
+      <div class="capacity-result" id="capacity-result">
+        <strong>おすすめ: </strong><span id="capacity-recommend">ahamo（2,970円）・LINEMO（2,728円）・楽天モバイル（2,178円）</span>
+        <span style="color:#64748B;font-size:.8rem;margin-left:8px">が20GB帯ではコスパが高いです</span>
+      </div>
+      <script>
+      var capacityLabels = ['〜1GB', '〜3GB', '〜20GB', '〜50GB', '無制限'];
+      var capacityRecommend = [
+        '楽天モバイル（1,078円）・IIJmio 2GB（850円）が超小容量では最安',
+        'IIJmio・LINEMO・povo（各990円）が3GBクラスでは最安',
+        'ahamo（2,970円）・LINEMO（2,728円）・楽天モバイル（2,178円）が20GBではコスパ高',
+        '楽天モバイル（3,278円）・UQモバイル（4,378円）が50GBクラスではおすすめ',
+        '楽天モバイル（3,278円 無制限）がデータ無制限では最安'
+      ];
+      document.getElementById('capacity-slider').addEventListener('input', function(){
+        var v = parseInt(this.value);
+        document.getElementById('slider-val').textContent = capacityLabels[v];
+        document.getElementById('capacity-recommend').textContent = capacityRecommend[v];
+      });
+      </script>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">格安SIM料金比較表</div>
+      <p class="section-sub">8社の主要プランを一覧で比較。<small>※ 当サイトはアフィリエイト広告を掲載しています</small></p>
+
+      <div class="filter-bar">
+        <div class="filter-group">
+          <span class="filter-label">回線:</span>
+          <button class="filter-btn active" data-group="line" data-value="all">すべて</button>
+          <button class="filter-btn" data-group="line" data-value="docomo">ドコモ系</button>
+          <button class="filter-btn" data-group="line" data-value="au">au系</button>
+          <button class="filter-btn" data-group="line" data-value="softbank">SB系</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>キャリア</th>
+              <th class="sortable">月額 3GB</th>
+              <th class="sortable">月額 20GB</th>
+              <th class="sortable sort-desc">通信速度</th>
+              <th>通話</th>
+              <th>回線</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-line="docomo">
+              <td><span class="rank rank-1">1</span>ahamo<span class="badge badge-hot">速度No.1</span></td>
+              <td>—</td>
+              <td><strong class="highlight-amount">2,970円</strong></td>
+              <td>130 Mbps</td>
+              <td>5分無料</td>
+              <td>ドコモ</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="softbank">
+              <td><span class="rank rank-1">1</span>LINEMO<span class="badge badge-new">最安3GB</span></td>
+              <td><strong class="highlight-amount">990円</strong></td>
+              <td><strong>2,728円</strong></td>
+              <td>70 Mbps</td>
+              <td>有料（別途）</td>
+              <td>ソフトバンク</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="au">
+              <td><span class="rank rank-3">3</span>UQモバイル</td>
+              <td>1,628円</td>
+              <td>3,278円</td>
+              <td>80 Mbps</td>
+              <td>有料</td>
+              <td>au</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="softbank">
+              <td><span class="rank rank-other">4</span>ワイモバイル</td>
+              <td>2,178円</td>
+              <td>4,158円</td>
+              <td>65 Mbps</td>
+              <td>有料</td>
+              <td>ソフトバンク</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="au">
+              <td><span class="rank rank-other">5</span>楽天モバイル</td>
+              <td>1,078円</td>
+              <td>2,178円</td>
+              <td>55 Mbps</td>
+              <td>無料(アプリ)</td>
+              <td>楽天</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="docomo">
+              <td><span class="rank rank-other">6</span>IIJmio</td>
+              <td><strong class="highlight-amount">990円</strong></td>
+              <td>2,000円</td>
+              <td>45 Mbps</td>
+              <td>有料</td>
+              <td>ドコモ/au</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="au">
+              <td><span class="rank rank-other">7</span>mineo</td>
+              <td>1,298円</td>
+              <td>2,178円</td>
+              <td>40 Mbps</td>
+              <td>有料</td>
+              <td>3キャリア</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr data-line="au">
+              <td><span class="rank rank-other">8</span>povo</td>
+              <td>990円/30日</td>
+              <td>—</td>
+              <td>100 Mbps</td>
+              <td>有料</td>
+              <td>au</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ 2026年4月時点 / 料金税込み / ahamoは20GBプラン最低構成 / povoは3GBトッピング30日</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">速度比較グラフ（実測平均）</div>
+      <div class="speed-bar-wrap">
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">ahamo</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:100%;background:#2563EB"></div></div>
+          <div class="speed-bar-val">130 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">povo</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:77%;background:#2563EB"></div></div>
+          <div class="speed-bar-val">100 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">UQモバイル</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:62%;background:#16A34A"></div></div>
+          <div class="speed-bar-val">80 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">LINEMO</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:54%;background:#16A34A"></div></div>
+          <div class="speed-bar-val">70 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">ワイモバイル</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:50%;background:#F59E0B"></div></div>
+          <div class="speed-bar-val">65 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">楽天モバイル</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:42%;background:#F59E0B"></div></div>
+          <div class="speed-bar-val">55 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">IIJmio</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:35%;background:#DC2626"></div></div>
+          <div class="speed-bar-val">45 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">mineo</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:31%;background:#DC2626"></div></div>
+          <div class="speed-bar-val">40 Mbps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">格安SIMで最も安いのはどこですか？<span class="icon">+</span></button>
+          <div class="faq-a">3GBプランはIIJmio・LINEMO・povo（30日）が990円で最安です。20GBはIIJmioの2,000円が最安です。ただしahamoは20GBのみ2,970円で5分無料通話込みであることを考えると、総合コスパはahamoが高い評価です。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">格安SIMに乗り換えると通話品質は落ちますか？<span class="icon">+</span></button>
+          <div class="faq-a">大手3キャリアの回線を借りているため、通話品質は大手と同等です。ドコモ系（ahamo・IIJmio）はドコモ回線、au系（UQ・povo）はau回線を使用しています。エリアも大手と変わりません。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">乗り換え時の番号は引き継げますか？<span class="icon">+</span></button>
+          <div class="faq-a">はい、MNP（番号ポータビリティ）制度を使えば電話番号を維持したまま乗り換えられます。現在の契約会社でMNP予約番号を取得（オンラインで即日発行が多い）してから、乗り換え先で手続きを行います。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">関連ページ</div>
+      <div class="related-grid">
+        <a href="data-plan.html" class="related-card">
+          <span class="related-icon">📊</span>
+          <div class="related-text">データ容量別比較<small>3GB/20GB/無制限で選ぶ</small></div>
+        </a>
+        <a href="family.html" class="related-card">
+          <span class="related-icon">👨‍👩‍👧‍👦</span>
+          <div class="related-text">家族向けSIM比較<small>家族割シミュレーター付き</small></div>
+        </a>
+        <a href="../hikari/index.html" class="related-card">
+          <span class="related-icon">📡</span>
+          <div class="related-text">光回線比較<small>自宅のWi-Fiもお得に</small></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="floating-cta">
+  <a href="#">ahamo 公式へ</a>
+  <a href="#">LINEMO 公式へ</a>
+</div>
+
+</body>
+</html>

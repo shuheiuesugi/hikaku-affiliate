@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NISA手数料比較【2026年4月】取引コストシミュレーター付き</title>
+<link rel="stylesheet" href="../../shared/style.css">
+<script src="../../shared/nav.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"TOP","item":"https://hikaku-navi.example.com/"},
+    {"@type":"ListItem","position":2,"name":"NISA","item":"https://hikaku-navi.example.com/nisa/"},
+    {"@type":"ListItem","position":3,"name":"手数料比較","item":"https://hikaku-navi.example.com/nisa/fee/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="breadcrumb-placeholder" data-items='[{"label":"NISA","url":"index.html"},{"label":"手数料比較"}]'></div>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">2026年4月 最新版</div>
+    <h1>NISA口座<span>手数料比較</span><br>シミュレーター付き</h1>
+    <p class="hero-sub">取引金額を入力するだけで各社の手数料差を自動計算。長期投資ではコスト差が利益に直結します。</p>
+    <div class="hero-meta">
+      <span class="update-date">最終更新: 2026年4月2日</span>
+      <strong>手数料シミュレーター付き</strong>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="section-title">手数料シミュレーター</div>
+      <p class="section-sub">積立金額と期間を入力して、信託報酬の差が最終的な資産にどう影響するか確認できます</p>
+
+      <div class="simulator">
+        <div class="sim-title">長期投資コストシミュレーター</div>
+        <div class="sim-row">
+          <label>月間積立金額</label>
+          <input type="number" class="sim-input" id="monthly-invest" value="30000" step="1000">
+          <span class="sim-unit">円</span>
+        </div>
+        <div class="sim-row">
+          <label>投資期間</label>
+          <select class="sim-input" id="invest-years" style="width:100px">
+            <option value="5">5年</option>
+            <option value="10">10年</option>
+            <option value="20" selected>20年</option>
+            <option value="30">30年</option>
+          </select>
+          <span class="sim-unit">年</span>
+        </div>
+        <div class="sim-row">
+          <label>年間想定利回り</label>
+          <input type="number" class="sim-input" id="annual-return" value="5" min="1" max="15" step="0.5">
+          <span class="sim-unit">%</span>
+        </div>
+        <button class="sim-btn" onclick="calcFee()">コストを計算する</button>
+
+        <div class="sim-result" id="fee-result">
+          <p style="font-weight:700;margin-bottom:12px">投資期間 <span id="res-years">20</span>年後の最終資産（概算）</p>
+          <div class="sim-result-grid">
+            <div class="sim-result-item">
+              <label>低コスト（信託報酬0.1%）<br>SBI/楽天のインデックスファンド</label>
+              <div class="val" id="res-low">-</div>
+              <small>万円</small>
+            </div>
+            <div class="sim-result-item">
+              <label>中コスト（信託報酬0.5%）</label>
+              <div class="val" id="res-mid">-</div>
+              <small>万円</small>
+            </div>
+            <div class="sim-result-item">
+              <label>高コスト（信託報酬1.5%）<br>銀行の投資信託等</label>
+              <div class="val" id="res-high">-</div>
+              <small>万円</small>
+            </div>
+            <div class="sim-result-item">
+              <label>コスト差（低vs高）</label>
+              <div class="val" id="res-diff" style="color:#DC2626">-</div>
+              <small>万円の差</small>
+            </div>
+          </div>
+          <p style="font-size:.75rem;color:#94A3B8;margin-top:12px">※ 税金・複利計算は簡易計算です。実際の運用成果を保証するものではありません。</p>
+        </div>
+      </div>
+
+      <script>
+      function calcFee(){
+        var monthly = parseFloat(document.getElementById('monthly-invest').value)||30000;
+        var years   = parseInt(document.getElementById('invest-years').value)||20;
+        var rate    = parseFloat(document.getElementById('annual-return').value)/100;
+        document.getElementById('res-years').textContent = years;
+
+        function calcFV(m, annualRate, n){
+          var r = annualRate / 12;
+          return m * ((Math.pow(1+r, n*12) - 1) / r);
+        }
+        var low  = calcFV(monthly, rate - 0.001, years);
+        var mid  = calcFV(monthly, rate - 0.005, years);
+        var high = calcFV(monthly, rate - 0.015, years);
+        var diff = low - high;
+
+        document.getElementById('res-low').textContent  = Math.round(low/10000).toLocaleString();
+        document.getElementById('res-mid').textContent  = Math.round(mid/10000).toLocaleString();
+        document.getElementById('res-high').textContent = Math.round(high/10000).toLocaleString();
+        document.getElementById('res-diff').textContent = Math.round(diff/10000).toLocaleString();
+        document.getElementById('fee-result').classList.add('show');
+      }
+      </script>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">証券会社別 手数料・コスト比較表</div>
+      <p class="section-sub">国内株式・投資信託の手数料、信託報酬の取り扱い状況を比較<small>（税込み・2026年4月時点）</small></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>証券会社</th>
+              <th>国内株式手数料</th>
+              <th>米国株手数料</th>
+              <th>投信手数料</th>
+              <th>最安投信<br>信託報酬</th>
+              <th>ポイント還元</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>SBI証券<span class="badge badge-hot">コストNo.1</span></td>
+              <td><strong class="highlight-amount">無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>Vポイント最大0.5%</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-1">1</span>楽天証券</td>
+              <td><strong>無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>楽天ポイント最大1%</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>マネックス証券</td>
+              <td><strong>無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>マネックスポイント最大1.1%</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>松井証券</td>
+              <td><strong>無料</strong></td>
+              <td>0.495%</td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>松井ポイント最大0.5%</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>auカブコム証券</td>
+              <td><strong>無料</strong></td>
+              <td>0.495%</td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>Pontaポイント最大0.5%</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">6</span>大和コネクト</td>
+              <td><strong>無料</strong></td>
+              <td>—</td>
+              <td><strong>無料</strong></td>
+              <td>0.05775%</td>
+              <td>dポイント/Pontaポイント</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ 各社の手数料は2026年4月時点。変更になる場合があります。最新情報は各社公式サイトでご確認ください。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">コストが長期投資に与える影響</div>
+      <div class="speed-bar-wrap">
+        <div style="margin-bottom:12px;font-weight:600">月3万円×20年積立・年5%運用での最終資産（試算）</div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">信託報酬0.1%</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:100%;background:#2563EB"></div></div>
+          <div class="speed-bar-val">約1,202万円</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">信託報酬0.5%</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:92%;background:#16A34A"></div></div>
+          <div class="speed-bar-val">約1,108万円</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">信託報酬1.0%</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:83%;background:#F59E0B"></div></div>
+          <div class="speed-bar-val">约1,003万円</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">信託報酬1.5%</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:74%;background:#DC2626"></div></div>
+          <div class="speed-bar-val">約899万円</div>
+        </div>
+      </div>
+      <div class="card-recommend" style="margin-top:16px"><strong>コスト差の影響</strong>信託報酬0.1%と1.5%の差は、20年後に303万円の資産差を生みます（月3万円・年5%運用の試算）。低コストインデックスファンドを選ぶことが長期投資の基本です。</div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">国内主要証券会社の手数料はどこも同じですか？<span class="icon">+</span></button>
+          <div class="faq-a">国内株式・投資信託の取引手数料は、SBI証券・楽天証券・マネックス証券・松井証券・auカブコム証券でいずれも無料（国内株式）です。差がつくのは米国株手数料、海外ETFの扱い、信託報酬の水準、ポイント還元率などです。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">信託報酬とは何ですか？<span class="icon">+</span></button>
+          <div class="faq-a">投資信託の運用・管理にかかる費用で、保有残高から日々自動的に引かれます。年率で表示され、例えば0.1%なら100万円の投資信託を保有すると年間1,000円のコストがかかります。長期投資では小さな差でも最終的な資産に大きく影響するため、できるだけ低いファンドを選ぶことが重要です。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">ポイント還元があるクレジットカード積立とは？<span class="icon">+</span></button>
+          <div class="faq-a">楽天証券では楽天カードで積立投資信託を購入すると最大1%の楽天ポイントが付与されます。SBI証券では三井住友カード積立で最大0.5〜5%のVポイントが付与されます。実質的に手数料をポイントで相殺できるためお得な仕組みです。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">関連ページ</div>
+      <div class="related-grid">
+        <a href="index.html" class="related-card">
+          <span class="related-icon">📈</span>
+          <div class="related-text">NISA総合比較<small>全6社を総合評価</small></div>
+        </a>
+        <a href="beginner.html" class="related-card">
+          <span class="related-icon">🔰</span>
+          <div class="related-text">初心者向けNISA<small>3ステップで始める</small></div>
+        </a>
+        <a href="../credit-card/high-return.html" class="related-card">
+          <span class="related-icon">💳</span>
+          <div class="related-text">高還元率クレカ<small>積立でポイントを貯める</small></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="floating-cta">
+  <a href="#">SBI証券 公式へ</a>
+  <a href="#">楽天証券 公式へ</a>
+</div>
+
+</body>
+</html>

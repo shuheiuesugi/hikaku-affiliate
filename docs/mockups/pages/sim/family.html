@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家族向け格安SIM比較【2026年4月】家族割シミュレーター付き</title>
+<link rel="stylesheet" href="../../shared/style.css">
+<script src="../../shared/nav.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"TOP","item":"https://hikaku-navi.example.com/"},
+    {"@type":"ListItem","position":2,"name":"格安SIM","item":"https://hikaku-navi.example.com/sim/"},
+    {"@type":"ListItem","position":3,"name":"家族向けSIM","item":"https://hikaku-navi.example.com/sim/family/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="breadcrumb-placeholder" data-items='[{"label":"格安SIM","url":"index.html"},{"label":"家族向けSIM比較"}]'></div>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">2026年4月 最新版</div>
+    <h1>家族向け<span>格安SIM</span>比較<br>家族割シミュレーター付き</h1>
+    <p class="hero-sub">家族人数を入力するだけで各社の月額合計を自動比較。家族4人で年間数万円の節約も可能。</p>
+    <div class="hero-meta">
+      <span class="update-date">最終更新: 2026年4月2日</span>
+      <strong>家族割シミュレーター付き</strong>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="section-title">家族割 月額シミュレーター</div>
+      <p class="section-sub">家族人数と各自のデータ容量を設定して、各社の月額合計を比較します</p>
+
+      <div class="simulator">
+        <div class="sim-title">家族まとめて料金シミュレーター</div>
+        <div class="sim-row">
+          <label>家族人数</label>
+          <select class="sim-input" id="family-count" style="width:100px">
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+            <option value="4" selected>4人</option>
+            <option value="5">5人</option>
+            <option value="6">6人</option>
+          </select>
+          <span class="sim-unit">（1人あたり20GBプランで計算）</span>
+        </div>
+        <button class="sim-btn" onclick="calcFamily()">家族の月額を計算する</button>
+
+        <div class="sim-result" id="family-result">
+          <p style="font-weight:700;margin-bottom:12px">家族 <span id="fam-num">4</span>人の月額合計比較</p>
+          <div class="sim-result-grid">
+            <div class="sim-result-item">
+              <label>楽天モバイル（無制限）</label>
+              <div class="val" id="fam-rakuten">-</div>
+              <small>円/月</small>
+            </div>
+            <div class="sim-result-item">
+              <label>ahamo（20GB）</label>
+              <div class="val" id="fam-ahamo">-</div>
+              <small>円/月</small>
+            </div>
+            <div class="sim-result-item">
+              <label>LINEMO（20GB）</label>
+              <div class="val" id="fam-linemo">-</div>
+              <small>円/月</small>
+            </div>
+            <div class="sim-result-item">
+              <label>UQモバイル（20GB）</label>
+              <div class="val" id="fam-uq">-</div>
+              <small>円/月</small>
+            </div>
+            <div class="sim-result-item">
+              <label>IIJmio（20GB）</label>
+              <div class="val" id="fam-iijmio">-</div>
+              <small>円/月</small>
+            </div>
+          </div>
+          <div style="margin-top:16px;background:#fff;border-radius:8px;padding:14px">
+            <div style="font-size:.88rem;font-weight:700;margin-bottom:8px">大手キャリアとの差額（年間）</div>
+            <div style="font-size:.82rem;color:#64748B">大手3キャリア平均（3GB: 約3,500円/人）との比較</div>
+            <div style="font-size:1.2rem;font-weight:800;color:#DC2626;margin-top:4px">楽天モバイルに乗り換えると年間 <span id="fam-saving">-</span> 円節約</div>
+          </div>
+          <p style="font-size:.75rem;color:#94A3B8;margin-top:12px">※ 概算です。家族割適用条件・プランによって実際の料金は異なります。</p>
+        </div>
+      </div>
+
+      <script>
+      function calcFamily(){
+        var n = parseInt(document.getElementById('family-count').value);
+        document.getElementById('fam-num').textContent = n;
+        var prices = {
+          rakuten: 2178,
+          ahamo:   2970,
+          linemo:  2728,
+          uq:      3278,
+          iijmio:  2000
+        };
+        for(var k in prices){
+          var el = document.getElementById('fam-' + k);
+          if(el) el.textContent = (prices[k] * n).toLocaleString();
+        }
+        var bigCarrier = 3500 * n;
+        var saving = (bigCarrier - prices.rakuten * n) * 12;
+        document.getElementById('fam-saving').textContent = saving.toLocaleString();
+        document.getElementById('family-result').classList.add('show');
+      }
+      </script>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">家族向けプラン比較表</div>
+      <p class="section-sub">家族割適用時の1人あたり料金（目安）<small>※ 当サイトはアフィリエイト広告を掲載しています</small></p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>キャリア</th>
+              <th>家族割の有無</th>
+              <th class="sortable">1人あたり（20GB）</th>
+              <th>家族4人合計</th>
+              <th>通話</th>
+              <th>回線</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>楽天モバイル<span class="badge badge-hot">家族最安</span></td>
+              <td>なし（元々安い）</td>
+              <td><strong class="highlight-amount">2,178円</strong></td>
+              <td><strong>8,712円</strong></td>
+              <td>無料(アプリ)</td>
+              <td>楽天</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-2">2</span>IIJmio</td>
+              <td>複数回線割引あり</td>
+              <td><strong>2,000円</strong></td>
+              <td><strong>8,000円</strong></td>
+              <td>有料</td>
+              <td>ドコモ/au</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>ワイモバイル</td>
+              <td>家族割あり（最大1,100円割引）</td>
+              <td>3,058円</td>
+              <td>12,232円</td>
+              <td>有料</td>
+              <td>ソフトバンク</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>UQモバイル</td>
+              <td>家族割あり（最大858円割引）</td>
+              <td>2,420円</td>
+              <td>9,680円</td>
+              <td>有料</td>
+              <td>au</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>ahamo</td>
+              <td>なし</td>
+              <td>2,970円</td>
+              <td>11,880円</td>
+              <td>5分無料</td>
+              <td>ドコモ</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ 家族割適用条件があります。実際の料金は各社公式サイトでご確認ください。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">家族でSIMを選ぶポイント</div>
+      <div class="guide-grid">
+        <div class="guide-item">
+          <div class="guide-num">1</div>
+          <h3>同じキャリアでまとめる</h3>
+          <p>ワイモバイル・UQモバイルは家族割適用で1人あたり最大1,100円割引。家族全員で同じ会社にまとめるとお得になります。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">2</div>
+          <h3>子どもの通信制限に注意</h3>
+          <p>子どものスマホはフィルタリング機能が必要な場合があります。ワイモバイル・UQモバイルはフィルタリングサービスが充実しています。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">3</div>
+          <h3>年齢別の容量選び</h3>
+          <p>高齢の親世代は3GB以下で十分なケースが多く、子供世代は動画視聴で20GB以上必要なことも。家族内で容量を変えてコストを最適化しましょう。</p>
+        </div>
+        <div class="guide-item">
+          <div class="guide-num">4</div>
+          <h3>親子間の通話を確認</h3>
+          <p>楽天モバイルはRakuten Linkアプリで家族間通話が無料。ahamoは5分無料通話付き。頻繁に家族で通話する場合は通話料金の計算も忘れずに。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">家族全員でバラバラのキャリアに乗り換えてもよいですか？<span class="icon">+</span></button>
+          <div class="faq-a">問題ありません。ただし家族割を適用したい場合は同一キャリアで契約する必要があります。楽天モバイルは家族割がない代わりに元々の料金が安く、個別に契約しても総コストが低いケースが多いです。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">子どものスマホに格安SIMを使っても安全ですか？<span class="icon">+</span></button>
+          <div class="faq-a">安全に使えます。多くの格安SIMはフィルタリングサービスに対応しています。ワイモバイルは「あんしんフィルター」、UQモバイルは「ファミリーポートフォリオ」などの子ども向けサービスがあります。ahamo・楽天は自分でペアレンタルコントロールを設定する必要があります。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">関連ページ</div>
+      <div class="related-grid">
+        <a href="index.html" class="related-card">
+          <span class="related-icon">📱</span>
+          <div class="related-text">格安SIM総合比較<small>全8社を比較</small></div>
+        </a>
+        <a href="data-plan.html" class="related-card">
+          <span class="related-icon">📊</span>
+          <div class="related-text">データ容量別比較<small>3GB/20GB/無制限</small></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="floating-cta">
+  <a href="#">楽天モバイル 公式へ</a>
+  <a href="#">UQモバイル 公式へ</a>
+</div>
+
+</body>
+</html>

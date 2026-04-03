@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIKAKUnavi モック一覧</title>
+<link rel="stylesheet" href="shared/style.css">
+<script src="shared/nav.js"></script>
+<style>
+.mock-index-hero{background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 100%);color:#fff;padding:48px 0;text-align:center}
+.mock-index-hero h1{font-size:2rem;font-weight:800;margin-bottom:8px}
+.mock-index-hero p{font-size:1rem;opacity:.9}
+.mock-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:32px 0}
+.mock-category{background:#fff;border-radius:12px;border:1px solid #E2E8F0;overflow:hidden}
+.mock-category-header{background:#2563EB;color:#fff;padding:14px 20px;font-weight:700;font-size:1rem}
+.mock-category-body{padding:16px 20px}
+.mock-link{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #F1F5F9;font-size:.88rem}
+.mock-link:last-child{border-bottom:none}
+.mock-link a{color:#2563EB;font-weight:600}
+.mock-link a:hover{text-decoration:underline}
+.mock-link-desc{font-size:.75rem;color:#94A3B8;margin-top:2px}
+.page-badge{font-size:.68rem;background:#EFF6FF;color:#2563EB;padding:2px 8px;border-radius:12px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="mock-index-hero">
+  <div class="container">
+    <h1>HIKAKUnavi モック一覧</h1>
+    <p>本番用モックアップ 15ページ — docs/mockups/</p>
+  </div>
+</div>
+
+<main>
+  <div class="container">
+    <div class="mock-grid">
+
+      <div class="mock-category">
+        <div class="mock-category-header">🏠 共通・トップ</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <a href="pages/top.html">トップページ</a>
+              <div class="mock-link-desc">全カテゴリ一覧・各カテゴリTop3プレビュー・最新更新情報</div>
+            </div>
+            <span class="page-badge">TOP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock-category">
+        <div class="mock-category-header">💳 クレジットカード（3ページ）</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <a href="pages/credit-card/index.html">クレカ総合比較</a>
+              <div class="mock-link-desc">フィルタバー・8枚比較表・詳細カード・選び方ガイド・FAQ</div>
+            </div>
+            <span class="page-badge">INDEX</span>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/credit-card/no-fee.html">年会費無料カード比較</a>
+              <div class="mock-link-desc">年会費0円限定・還元率デフォルトソート</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/credit-card/high-return.html">高還元率カード比較</a>
+              <div class="mock-link-desc">還元率1%以上・年間ポイントシミュレーター付き</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock-category">
+        <div class="mock-category-header">📡 光回線（3ページ）</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <a href="pages/hikari/index.html">光回線総合比較</a>
+              <div class="mock-link-desc">住居タイプ切替・速度横棒グラフ・CB強調</div>
+            </div>
+            <span class="page-badge">INDEX</span>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/hikari/mansion.html">マンション向け光回線</a>
+              <div class="mock-link-desc">マンション料金・エリア検索モック</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/hikari/gaming.html">ゲーミング光回線</a>
+              <div class="mock-link-desc">速度重視・Ping値・安定性データ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock-category">
+        <div class="mock-category-header">📱 格安SIM（3ページ）</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <a href="pages/sim/index.html">格安SIM総合比較</a>
+              <div class="mock-link-desc">容量スライダーフィルタ・8社料金比較表</div>
+            </div>
+            <span class="page-badge">INDEX</span>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/sim/data-plan.html">データ容量別比較</a>
+              <div class="mock-link-desc">3GB/20GB/無制限タブ切替</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/sim/family.html">家族向けSIM比較</a>
+              <div class="mock-link-desc">家族割シミュレーター（人数→各社合計額）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock-category">
+        <div class="mock-category-header">📈 NISA・投資（3ページ）</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <a href="pages/nisa/index.html">NISA総合比較</a>
+              <div class="mock-link-desc">手数料・投信本数・アプリ評価比較</div>
+            </div>
+            <span class="page-badge">INDEX</span>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/nisa/beginner.html">初心者向けNISA</a>
+              <div class="mock-link-desc">口座開設3ステップ・初心者FAQ充実</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <a href="pages/nisa/fee.html">NISA手数料比較</a>
+              <div class="mock-link-desc">取引金額→各社手数料シミュレーター</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock-category">
+        <div class="mock-category-header">📁 共有リソース</div>
+        <div class="mock-category-body">
+          <div class="mock-link">
+            <div>
+              <span style="color:#64748B">shared/style.css</span>
+              <div class="mock-link-desc">デザイントークン + 全ページ共通CSS</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <span style="color:#64748B">shared/nav.js</span>
+              <div class="mock-link-desc">グローバルナビ・パンくず・FAQ・タブ・フィルタ</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <span style="color:#64748B">shared/mock-data.json</span>
+              <div class="mock-link-desc">全ページ共有モックデータ（クレカ・光回線・SIM・NISA）</div>
+            </div>
+          </div>
+          <div class="mock-link">
+            <div>
+              <span style="color:#64748B">sitemap.json</span>
+              <div class="mock-link-desc">ページ構造定義（title/path/parent/children）</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+</body>
+</html>

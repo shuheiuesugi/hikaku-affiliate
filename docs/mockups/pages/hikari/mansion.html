@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>マンション向け光回線おすすめ比較【2026年4月】集合住宅に最適な回線</title>
+<link rel="stylesheet" href="../../shared/style.css">
+<script src="../../shared/nav.js"></script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"TOP","item":"https://hikaku-navi.example.com/"},
+    {"@type":"ListItem","position":2,"name":"光回線","item":"https://hikaku-navi.example.com/hikari/"},
+    {"@type":"ListItem","position":3,"name":"マンション向け","item":"https://hikaku-navi.example.com/hikari/mansion/"}
+  ]
+}
+</script>
+<style>
+.area-search{background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:24px;margin-bottom:24px}
+.area-search-title{font-size:1rem;font-weight:700;margin-bottom:16px}
+.area-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.area-select{font-size:.9rem;padding:8px 14px;border:1px solid #E2E8F0;border-radius:6px;background:#fff;min-width:160px}
+.area-btn{background:#2563EB;color:#fff;font-weight:700;font-size:.9rem;padding:8px 24px;border:none;border-radius:6px;cursor:pointer}
+.area-result{margin-top:16px;padding:14px;background:#EFF6FF;border-radius:8px;font-size:.88rem;display:none}
+.area-result.show{display:block}
+</style>
+</head>
+<body>
+
+<div id="breadcrumb-placeholder" data-items='[{"label":"光回線","url":"index.html"},{"label":"マンション向け"}]'></div>
+
+<div class="hero">
+  <div class="container">
+    <div class="hero-tag">2026年4月 最新版</div>
+    <h1>マンション向け<br><span>光回線比較</span></h1>
+    <p class="hero-sub">集合住宅（マンション・アパート）向けの料金で徹底比較。エリア検索機能付き。</p>
+    <div class="hero-meta">
+      <span class="update-date">最終更新: 2026年4月2日</span>
+      <strong>マンション月額料金で比較</strong>
+      <span class="pr-badge">広告・PR含む</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section>
+    <div class="container">
+      <div class="section-title">エリア検索（お住まいの地域を選択）</div>
+      <div class="area-search">
+        <div class="area-search-title">お住まいのエリアで利用可能な光回線を確認</div>
+        <div class="area-row">
+          <select class="area-select" id="pref-select">
+            <option value="">都道府県を選択</option>
+            <option value="tokyo">東京都</option>
+            <option value="kanagawa">神奈川県</option>
+            <option value="osaka">大阪府</option>
+            <option value="aichi">愛知県</option>
+            <option value="saitama">埼玉県</option>
+            <option value="chiba">千葉県</option>
+            <option value="hyogo">兵庫県</option>
+            <option value="other">その他の都道府県</option>
+          </select>
+          <button class="area-btn" onclick="checkArea()">エリアを確認</button>
+        </div>
+        <div class="area-result" id="area-result">
+          <strong id="area-result-pref"></strong>では以下の回線が利用可能です：
+          <span id="area-result-lines"></span>
+          <p style="margin-top:8px;font-size:.78rem;color:#64748B">※ 上記はモックデータです。実際のエリアは各社公式サイトでご確認ください。</p>
+        </div>
+      </div>
+      <script>
+      var areaData = {
+        tokyo:    {name:'東京都', lines:'NURO光・ドコモ光・ソフトバンク光・auひかり・楽天ひかり・ビッグローブ光 すべて利用可能'},
+        kanagawa: {name:'神奈川県', lines:'NURO光・ドコモ光・ソフトバンク光・auひかり・楽天ひかり すべて利用可能（一部エリアを除く）'},
+        osaka:    {name:'大阪府', lines:'NURO光・ドコモ光・ソフトバンク光・auひかり・楽天ひかり すべて利用可能'},
+        aichi:    {name:'愛知県', lines:'ドコモ光・ソフトバンク光・auひかり・楽天ひかり利用可能（NURO光は一部エリアのみ）'},
+        saitama:  {name:'埼玉県', lines:'NURO光・ドコモ光・ソフトバンク光・楽天ひかり利用可能'},
+        chiba:    {name:'千葉県', lines:'NURO光・ドコモ光・ソフトバンク光・楽天ひかり利用可能'},
+        hyogo:    {name:'兵庫県', lines:'ドコモ光・ソフトバンク光・auひかり・楽天ひかり利用可能'},
+        other:    {name:'その他地域', lines:'ドコモ光・ソフトバンク光・楽天ひかりは全国対応。詳細は各社公式サイトでご確認ください'}
+      };
+      function checkArea(){
+        var val = document.getElementById('pref-select').value;
+        if(!val) return;
+        var d = areaData[val];
+        document.getElementById('area-result-pref').textContent = d.name;
+        document.getElementById('area-result-lines').textContent = d.lines;
+        document.getElementById('area-result').classList.add('show');
+      }
+      </script>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">マンション向け料金比較表</div>
+      <p class="section-sub">集合住宅（マンション・アパート）の月額料金で比較しています<small>（税込み）</small></p>
+
+      <div class="sort-bar">
+        <label>並び替え:</label>
+        <select class="sort-select">
+          <option value="rank">おすすめ順</option>
+          <option value="price">月額料金が安い順</option>
+          <option value="speed">速度が速い順</option>
+        </select>
+        <span class="result-count">マンション向け <strong>6回線</strong></span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>回線名</th>
+              <th class="sortable">マンション月額</th>
+              <th class="sortable">実測速度</th>
+              <th>工事費</th>
+              <th>キャッシュバック</th>
+              <th>スマホ割</th>
+              <th>おすすめ度</th>
+              <th>公式サイト</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank rank-1">1</span>NURO光<span class="badge badge-hot">速度No.1</span></td>
+              <td><strong>5,200円</strong></td>
+              <td>580 Mbps</td>
+              <td>44,000円（実質無料）</td>
+              <td><strong class="highlight-amount">45,000円</strong></td>
+              <td>ソフトバンク</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-1">1</span>ドコモ光<span class="badge badge-new">ドコモ割</span></td>
+              <td><strong>4,400円</strong></td>
+              <td>270 Mbps</td>
+              <td>無料</td>
+              <td><strong class="highlight-amount">38,000円</strong></td>
+              <td>ドコモ最大1,100円</td>
+              <td><span class="stars">★★★★★</span></td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-3">3</span>ソフトバンク光</td>
+              <td><strong>4,180円</strong></td>
+              <td>310 Mbps</td>
+              <td>26,400円（実質無料）</td>
+              <td><strong>37,000円</strong></td>
+              <td>SB/Y!mobile</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">4</span>auひかり</td>
+              <td><strong>4,180円</strong></td>
+              <td>470 Mbps</td>
+              <td>27,500円（実質無料）</td>
+              <td><strong class="highlight-amount">72,000円</strong></td>
+              <td>au/UQ</td>
+              <td><span class="stars">★★★★</span>☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">5</span>楽天ひかり</td>
+              <td><strong>4,180円</strong></td>
+              <td>220 Mbps</td>
+              <td>無料</td>
+              <td>なし</td>
+              <td>楽天モバイル割引</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+            <tr>
+              <td><span class="rank rank-other">6</span>ビッグローブ光</td>
+              <td><strong>4,378円</strong></td>
+              <td>250 Mbps</td>
+              <td>無料</td>
+              <td><strong>40,000円</strong></td>
+              <td>au/UQ</td>
+              <td><span class="stars">★★★</span>☆☆</td>
+              <td><a href="#" class="cta-btn">公式サイトへ</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.75rem;color:#94A3B8;margin-top:8px">※ 2026年4月時点 / 料金税込み / キャッシュバックは代理店経由の場合 / ※ 当サイトはアフィリエイト広告を掲載しています</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">速度比較グラフ（マンション実測値）</div>
+      <div class="speed-bar-wrap">
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">NURO光</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:100%;background:#2563EB"></div></div>
+          <div class="speed-bar-val">580 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">auひかり</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:81%;background:#2563EB"></div></div>
+          <div class="speed-bar-val">470 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">ソフトバンク光</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:53%;background:#16A34A"></div></div>
+          <div class="speed-bar-val">310 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">ドコモ光</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:47%;background:#16A34A"></div></div>
+          <div class="speed-bar-val">270 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">ビッグローブ光</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:43%;background:#F59E0B"></div></div>
+          <div class="speed-bar-val">250 Mbps</div>
+        </div>
+        <div class="speed-bar-row">
+          <div class="speed-bar-label">楽天ひかり</div>
+          <div class="speed-bar-track"><div class="speed-bar-fill" style="width:38%;background:#F59E0B"></div></div>
+          <div class="speed-bar-val">220 Mbps</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff">
+    <div class="container">
+      <div class="section-title">よくある質問（FAQ）</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">マンションの光回線工事で管理会社の許可は必要ですか？<span class="icon">+</span></button>
+          <div class="faq-a">必要な場合があります。建物への新規光ファイバー引き込みには管理会社への申請が必要です。ただし、建物にすでに光回線設備が整っている場合（光配線方式）は工事が不要または最小限で済みます。まず管理会社に確認してください。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">マンションと戸建てで料金が違うのはなぜですか？<span class="icon">+</span></button>
+          <div class="faq-a">マンションは建物全体で1本の光ファイバーを引き込み、各戸に分配するため、1戸あたりのコストが低くなります。NURO光はマンション・戸建て同額ですが、ドコモ光・ソフトバンク光は1,000〜1,500円程度マンションの方が安くなります。</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">NURO光はマンションでも速度が出ますか？<span class="icon">+</span></button>
+          <div class="faq-a">はい。NURO光はマンションでも独自の2G（2Gbps）回線を提供しており、実測平均580Mbpsと業界最速クラスです。ただし、建物の配線方式やルーターによって速度が変わる場合があります。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">関連ページ</div>
+      <div class="related-grid">
+        <a href="index.html" class="related-card">
+          <span class="related-icon">📡</span>
+          <div class="related-text">光回線総合比較<small>全6回線を比較</small></div>
+        </a>
+        <a href="gaming.html" class="related-card">
+          <span class="related-icon">🎮</span>
+          <div class="related-text">ゲーミング光回線<small>Ping・安定性重視</small></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="floating-cta">
+  <a href="#">NURO光 公式へ</a>
+  <a href="#">ドコモ光 公式へ</a>
+</div>
+
+</body>
+</html>

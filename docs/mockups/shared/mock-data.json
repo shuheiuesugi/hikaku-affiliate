@@ -1,0 +1,38 @@
+{
+  "creditCards": [
+    {"rank":1,"name":"三井住友カード(NL)","fee":"永年無料","returnRate":"0.5〜7%","point":"Vポイント","insurance":"○","approval":"★★★","score":"★★★★★","brand":"VISA","annualFee":0,"baseReturn":0.5,"maxReturn":7.0,"campaign":"最大8,000円相当プレゼント","recommend":"コンビニ・マクドナルドをよく使う方","tags":["永年無料","最大7%還元","ナンバーレス"],"pros":["コンビニ3社・マクドで最大7%還元","カード番号が表面なしで高セキュリティ","最短10秒でカード番号発行"],"cons":["通常還元率は0.5%","特定店舗以外では恩恵が少ない"]},
+    {"rank":1,"name":"JCBカードW","fee":"永年無料","returnRate":"1.0〜10.5%","point":"Oki Dokiポイント","insurance":"○","approval":"★★★","score":"★★★★★","brand":"JCB","annualFee":0,"baseReturn":1.0,"maxReturn":10.5,"campaign":"最大15,000円キャッシュバック","recommend":"Amazon・スターバックスをよく利用する39歳以下の方","tags":["永年無料","最大10.5%還元","39歳以下限定"],"pros":["基本還元率が1%と高水準","Amazon利用で最大3倍ポイント","スタバで10倍ポイント"],"cons":["40歳以上は申し込み不可","JCB加盟店限定（海外で使いにくい場面も）"]},
+    {"rank":3,"name":"楽天カード","fee":"永年無料","returnRate":"1.0〜3.0%","point":"楽天ポイント","insurance":"○","approval":"★★★★","score":"★★★★☆","brand":"VISA/JCB","annualFee":0,"baseReturn":1.0,"maxReturn":3.0,"campaign":"5,000ポイントプレゼント","recommend":"楽天市場・楽天トラベルをよく利用する方","tags":["永年無料","楽天経済圏","高審査通過率"],"pros":["楽天市場で常時3倍ポイント","楽天Edy一体型が選択可能","年会費永年無料で保険付き"],"cons":["楽天以外では還元率1%","楽天市場以外のメリットが薄い"]},
+    {"rank":4,"name":"dカード","fee":"永年無料","returnRate":"1.0%","point":"dポイント","insurance":"×","approval":"★★★★","score":"★★★★☆","brand":"VISA","annualFee":0,"baseReturn":1.0,"maxReturn":1.0,"campaign":"入会特典 最大4,000ポイント","recommend":"ドコモユーザー・dポイントを貯めたい方","tags":["永年無料","dポイント","ドコモ連携"],"pros":["ドコモ回線利用料金にもポイント付与","dポイント加盟店で使いやすい","dカード特約店で最大5倍"],"cons":["ドコモ以外のユーザーには恩恵が少ない","旅行保険なし"]},
+    {"rank":5,"name":"PayPayカード","fee":"永年無料","returnRate":"1.0%","point":"PayPayポイント","insurance":"×","approval":"★★★★","score":"★★★★☆","brand":"VISA/Mastercard/JCB","annualFee":0,"baseReturn":1.0,"maxReturn":1.0,"campaign":"最大5,000ポイント還元","recommend":"PayPay経済圏・Yahoo!ショッピング利用者","tags":["永年無料","PayPay連携","3ブランド対応"],"pros":["Yahoo!ショッピングで常時3倍","PayPay残高チャージ可能な唯一のクレカ","3ブランド展開で使いやすい"],"cons":["旅行保険なし","PayPay以外での恩恵が薄い"]},
+    {"rank":6,"name":"エポスカード","fee":"永年無料","returnRate":"0.5%","point":"エポスポイント","insurance":"◎","approval":"★★★★★","score":"★★★☆☆","brand":"VISA","annualFee":0,"baseReturn":0.5,"maxReturn":0.5,"campaign":"2,000ポイントプレゼント","recommend":"海外旅行保険を重視する方・審査に自信のない方","tags":["永年無料","海外保険◎","審査ゆるめ"],"pros":["年会費無料で海外旅行保険が充実","審査通過率が高い","丸井・マルイで優待あり"],"cons":["基本還元率が0.5%と低い","国内旅行保険なし"]},
+    {"rank":7,"name":"イオンカード","fee":"永年無料","returnRate":"0.5〜1.0%","point":"WAON POINT","insurance":"×","approval":"★★★★","score":"★★★☆☆","brand":"VISA/Mastercard/JCB","annualFee":0,"baseReturn":0.5,"maxReturn":1.0,"campaign":"入会後3ヶ月 WAON POINT 5倍","recommend":"イオン・イオンモールをよく利用する方","tags":["永年無料","イオン5倍","電子マネー一体"],"pros":["イオングループで常時2倍WAON POINT","毎月20日・30日は全品5%OFF","WAON一体型が便利"],"cons":["旅行保険なし","イオン以外での恩恵が少ない"]},
+    {"rank":8,"name":"au PAYカード","fee":"永年無料※","returnRate":"1.0%","point":"Pontaポイント","insurance":"○","approval":"★★★★","score":"★★★☆☆","brand":"VISA","annualFee":0,"baseReturn":1.0,"maxReturn":1.0,"campaign":"最大10,000Pontaポイント","recommend":"auまたはUQモバイルユーザー","tags":["au/UQ連携","Ponta","旅行保険付"],"pros":["au利用料金1%ポイント付与","Pontaポイント共通利用可","海外旅行保険付帯"],"cons":["au/UQ以外は年会費1,375円","Pontaの使い道が限定的"]}
+  ],
+  "hikariLines": [
+    {"rank":1,"name":"NURO光","priceM":"5,200円","priceH":"5,200円","speed":580,"cashback":"45,000円","smartphoneDiscount":"ソフトバンク","score":"★★★★★","campaign":"ソフトバンクユーザー最大55,000円CB"},
+    {"rank":1,"name":"ドコモ光","priceM":"4,400円","priceH":"5,720円","speed":270,"cashback":"38,000円","smartphoneDiscount":"ドコモ","score":"★★★★★","campaign":"ドコモユーザー割引あり"},
+    {"rank":3,"name":"ソフトバンク光","priceM":"4,180円","priceH":"5,720円","speed":310,"cashback":"37,000円","smartphoneDiscount":"SB/Y!mobile","score":"★★★★☆","campaign":"セット割 最大1,100円/月割引"},
+    {"rank":4,"name":"auひかり","priceM":"4,180円","priceH":"5,610円","speed":470,"cashback":"72,000円","smartphoneDiscount":"au/UQ","score":"★★★★☆","campaign":"auスマートバリュー 最大1,100円割引"},
+    {"rank":5,"name":"楽天ひかり","priceM":"4,180円","priceH":"5,280円","speed":220,"cashback":"なし","smartphoneDiscount":"楽天モバイル","score":"★★★☆☆","campaign":"楽天モバイルセットで割引"},
+    {"rank":6,"name":"ビッグローブ光","priceM":"4,378円","priceH":"5,478円","speed":250,"cashback":"40,000円","smartphoneDiscount":"au/UQ","score":"★★★☆☆","campaign":"ビッグローブモバイルセット割"}
+  ],
+  "simPlans": [
+    {"rank":1,"name":"ahamo","price3":null,"price20":"2,970円","speed":130,"call":"5分無料","line":"ドコモ","score":"★★★★★"},
+    {"rank":1,"name":"LINEMO","price3":"990円","price20":"2,728円","speed":70,"call":"有料","line":"ソフトバンク","score":"★★★★★"},
+    {"rank":3,"name":"UQモバイル","price3":"1,628円","price20":"3,278円","speed":80,"call":"有料","line":"au","score":"★★★★☆"},
+    {"rank":4,"name":"ワイモバイル","price3":"2,178円","price20":"4,158円","speed":65,"call":"有料","line":"ソフトバンク","score":"★★★★☆"},
+    {"rank":5,"name":"楽天モバイル","price3":"1,078円","price20":"2,178円","speed":55,"call":"無料(アプリ)","line":"楽天","score":"★★★★☆"},
+    {"rank":6,"name":"IIJmio","price3":"990円","price20":"2,000円","speed":45,"call":"有料","line":"ドコモ/au","score":"★★★☆☆"},
+    {"rank":7,"name":"mineo","price3":"1,298円","price20":"2,178円","speed":40,"call":"有料","line":"3キャリア","score":"★★★☆☆"},
+    {"rank":8,"name":"povo","price3":"990円/30日","price20":null,"speed":100,"call":"有料","line":"au","score":"★★★☆☆"}
+  ],
+  "nisaBrokers": [
+    {"rank":1,"name":"SBI証券","fee":"無料","nisa":"◎","funds":2600,"appRating":"4.2★","point":"Tポイント/Vポイント","score":"★★★★★"},
+    {"rank":1,"name":"楽天証券","fee":"無料","nisa":"◎","funds":2500,"appRating":"4.4★","point":"楽天ポイント","score":"★★★★★"},
+    {"rank":3,"name":"マネックス証券","fee":"無料","nisa":"◎","funds":1700,"appRating":"3.8★","point":"マネックスポイント","score":"★★★★☆"},
+    {"rank":4,"name":"松井証券","fee":"無料","nisa":"◎","funds":1800,"appRating":"3.5★","point":"松井証券ポイント","score":"★★★☆☆"},
+    {"rank":5,"name":"auカブコム証券","fee":"無料","nisa":"◎","funds":1700,"appRating":"3.6★","point":"Pontaポイント","score":"★★★☆☆"},
+    {"rank":6,"name":"大和コネクト","fee":"無料","nisa":"○","funds":50,"appRating":"4.0★","point":"dポイント/Pontaポイント","score":"★★★☆☆"}
+  ]
+}

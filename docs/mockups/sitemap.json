@@ -1,0 +1,110 @@
+{
+  "site": "HIKAKUnavi",
+  "baseUrl": "docs/mockups/",
+  "pages": [
+    {
+      "id": "top",
+      "title": "トップページ",
+      "path": "pages/top.html",
+      "parent": null,
+      "children": ["credit-card-index","hikari-index","sim-index","nisa-index"],
+      "description": "全カテゴリ一覧・人気Top3プレビュー・最新更新情報"
+    },
+    {
+      "id": "credit-card-index",
+      "title": "クレジットカード総合比較",
+      "path": "pages/credit-card/index.html",
+      "parent": "top",
+      "children": ["credit-card-no-fee","credit-card-high-return"],
+      "description": "フィルタバー付き8枚比較表・詳細カード・選び方ガイド"
+    },
+    {
+      "id": "credit-card-no-fee",
+      "title": "年会費無料クレジットカード比較",
+      "path": "pages/credit-card/no-fee.html",
+      "parent": "credit-card-index",
+      "children": [],
+      "description": "年会費無料カード限定。還元率デフォルトソート"
+    },
+    {
+      "id": "credit-card-high-return",
+      "title": "高還元率クレジットカード比較",
+      "path": "pages/credit-card/high-return.html",
+      "parent": "credit-card-index",
+      "children": [],
+      "description": "還元率1%以上のカード。年間獲得ポイントシミュレーター付き"
+    },
+    {
+      "id": "hikari-index",
+      "title": "光回線総合比較",
+      "path": "pages/hikari/index.html",
+      "parent": "top",
+      "children": ["hikari-mansion","hikari-gaming"],
+      "description": "住居タイプ切替・速度横棒グラフ・キャッシュバック強調"
+    },
+    {
+      "id": "hikari-mansion",
+      "title": "マンション向け光回線比較",
+      "path": "pages/hikari/mansion.html",
+      "parent": "hikari-index",
+      "children": [],
+      "description": "マンション料金のみ表示。エリア検索モック"
+    },
+    {
+      "id": "hikari-gaming",
+      "title": "ゲーミング光回線比較",
+      "path": "pages/hikari/gaming.html",
+      "parent": "hikari-index",
+      "children": [],
+      "description": "速度重視。Ping値・安定性データ表示"
+    },
+    {
+      "id": "sim-index",
+      "title": "格安SIM総合比較",
+      "path": "pages/sim/index.html",
+      "parent": "top",
+      "children": ["sim-data-plan","sim-family"],
+      "description": "容量スライダーフィルタ・料金比較表"
+    },
+    {
+      "id": "sim-data-plan",
+      "title": "格安SIM データ容量別比較",
+      "path": "pages/sim/data-plan.html",
+      "parent": "sim-index",
+      "children": [],
+      "description": "容量別（3GB/20GB/無制限）タブ切替"
+    },
+    {
+      "id": "sim-family",
+      "title": "家族向け格安SIM比較",
+      "path": "pages/sim/family.html",
+      "parent": "sim-index",
+      "children": [],
+      "description": "家族割シミュレーター（人数入力→各社合計額比較）"
+    },
+    {
+      "id": "nisa-index",
+      "title": "NISA証券口座総合比較",
+      "path": "pages/nisa/index.html",
+      "parent": "top",
+      "children": ["nisa-beginner","nisa-fee"],
+      "description": "手数料比較表・投信本数・アプリ評価"
+    },
+    {
+      "id": "nisa-beginner",
+      "title": "初心者向けNISA口座比較",
+      "path": "pages/nisa/beginner.html",
+      "parent": "nisa-index",
+      "children": [],
+      "description": "口座開設3ステップフロー図・初心者向けFAQ充実"
+    },
+    {
+      "id": "nisa-fee",
+      "title": "NISA手数料比較",
+      "path": "pages/nisa/fee.html",
+      "parent": "nisa-index",
+      "children": [],
+      "description": "手数料シミュレーター（取引金額→各社手数料比較）"
+    }
+  ]
+}
